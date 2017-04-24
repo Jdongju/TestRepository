@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="335.0" prefWidth="518.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <CheckBox fx:id="cb1" mnemonicParsing="false" text="안경" />
+      <CheckBox fx:id="cb2" layoutY="32.0" mnemonicParsing="false" text="모자" />
+      <ImageView fx:id="checkImageView" fitHeight="150.0" fitWidth="200.0" layoutX="100.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/geek.gif" />
+         </image>
+      </ImageView>
+      <Button fx:id="btnClose" layoutX="145.0" layoutY="295.0" mnemonicParsing="false" text="닫기">
+         <graphic>
+            <ImageView fitHeight="70.0" fitWidth="159.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/exit.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox prefHeight="316.0" prefWidth="521.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="100.0" prefWidth="370.0">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Chrysanthemum.jpg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="100.0" prefWidth="289.0">
+               <children>
+                  <Label text="안녕하세요">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="오늘은 비가 오네요. &#10;자바학습 열심히 하고 있으시죠&#10;" wrapText="true" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+       <HBox prefHeight="100.0" prefWidth="370.0">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Desert.jpg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="100.0" prefWidth="289.0">
+               <children>
+                  <Label text="안녕하세요">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="오늘은 비가 오네요. &#10;자바학습 열심히 하고 있으시죠" wrapText="true" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+       <HBox prefHeight="100.0" prefWidth="370.0">
+         <children>
+            <ImageView fitHeight="119.0" fitWidth="133.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/Hydrangeas.jpg" />
+               </image>
+            </ImageView>
+            <VBox prefHeight="100.0" prefWidth="289.0">
+               <children>
+                  <Label text="안녕하세요">
+                     <font>
+                        <Font name="System Italic" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label text="오늘은 비가 오네요. &#10;자바학습 열심히 하고 있으시죠&#10;" />
+               </children>
+            </VBox>
+         </children>
+         <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+         </padding>
+      </HBox>
+   </children>
+</VBox>
