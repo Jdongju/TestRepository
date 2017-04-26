@@ -16,5 +16,9 @@ public class HomeController {
 	public String html() {
 		return "html";
 	}
+	@RequestMapping("/css/exam01")
+	public String cssExam01() {
+		return "css/exam01";
+	}
 
 }
