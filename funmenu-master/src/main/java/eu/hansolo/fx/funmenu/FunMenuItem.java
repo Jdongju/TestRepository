@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package main.java.eu.hansolo.fx.funmenu;
+package eu.hansolo.fx.funmenu;
 
 import javafx.beans.DefaultProperty;
 import javafx.beans.property.ObjectProperty;

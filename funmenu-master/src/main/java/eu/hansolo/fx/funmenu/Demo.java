@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package main.java.eu.hansolo.fx.funmenu;
+package eu.hansolo.fx.funmenu;
 
 import javafx.application.Application;
 import javafx.geometry.Insets;
