@@ -41,25 +41,95 @@ public class HomeController {
 	public String javascriptExam02() {
 		return "javascript/exam02";
 	}
+
 	@RequestMapping("/javascript/exam03")
 	public String javascriptExam03() {
 		return "javascript/exam03";
 	}
+
 	@RequestMapping("/javascript/exam04")
 	public String javascriptExam04() {
 		return "javascript/exam04";
 	}
+
+	@RequestMapping("/javascript/exam05")
+	public String javascriptExam05() {
+		return "javascript/exam05";
+	}
+
+	@RequestMapping("/javascript/exam06")
+	public String javascriptExam06() {
+		return "javascript/exam06";
+	}
+
+	@RequestMapping("/javascript/exam07")
+	public String javascriptExam07() {
+		return "javascript/exam07";
+	}
+
+	@RequestMapping("/javascript/exam08")
+	public String javascriptExam08() {
+		return "javascript/exam08";
+	}
+
+	@RequestMapping("/javascript/exam09")
+	public String javascriptExam09() {
+		return "javascript/exam09";
+	}
+
+	@RequestMapping("/javascript/exam10")
+	public String javascriptExam10() {
+		return "javascript/exam10";
+	}
+
+	@RequestMapping("/javascript/exam11")
+	public String javascriptExam11() {
+		return "javascript/exam11";
+	}
+
+	@RequestMapping("/jquery/exam01")
+	public String jqueryExam01() {
+		return "jquery/exam01";
+	}
+
+	@RequestMapping("/jquery/exam02")
+	public String jqueryExam02() {
+		return "jquery/exam02";
+	}
+
+	@RequestMapping("/jquery/exam03")
+	public String jqueryExam03() {
+		return "jquery/exam03";
+	}
+
+	@RequestMapping("/jquery/exam04")
+	public String jqueryExam04() {
+		return "jquery/exam04";
+	}
+
+	@RequestMapping("/jquery/exam04_html_fragment")
+	public String jqueryExam04_html_fragment() {
+		return "jquery/exam04_html_fragment";
+	}
+
+	@RequestMapping("/jquery/exam04_json")
+	public String jqueryExam04_json() {
+		return "jquery/exam04_json";
+	}
+
 	@RequestMapping("/bootstrap/exam01")
 	public String bootstrapExam01() {
 		return "bootstrap/exam01";
 	}
+
 	@RequestMapping("/bootstrap/exam02")
 	public String bootstrapExam02() {
 		return "bootstrap/exam02";
 	}
+
 	@RequestMapping("/bootstrap/exam03")
 	public String bootstrapExam03() {
 		return "bootstrap/exam03";
 	}
-	
+
 }
