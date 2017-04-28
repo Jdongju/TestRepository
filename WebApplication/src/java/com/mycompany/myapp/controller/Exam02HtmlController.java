@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class HtmlController {
+public class Exam02HtmlController {
 
 	@RequestMapping("/html/exam01") //context까지 생략되어있음 http://localhost:8080/WebApplication
 	public String html() {

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class JavaScriptController {
+public class Exam04JavaScriptController {
 
 	@RequestMapping("/javascript/exam01")
 	public String javascriptExam01() {

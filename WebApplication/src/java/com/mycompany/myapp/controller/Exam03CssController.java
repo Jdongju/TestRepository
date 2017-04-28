@@ -5,7 +5,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
 @RequestMapping("/css")
-public class CssController {
+public class Exam03CssController {
 
 	@RequestMapping("/exam01")
 	public String cssExam01() {

@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-public class BootstrapController {
+public class Exam05BootstrapController {
 	@RequestMapping("/bootstrap/exam01")
 	public String bootstrapExam01() {
 		return "bootstrap/exam01";

@@ -30,6 +30,17 @@
 		<%}%>
 
 		<h4>Jquery</h4>
+		<%for (int i = 1; i < 5; i++) {
+				String exam = "exam";
+				if (i < 10) {
+					exam += "0" + i;
+				} else {
+					exam += String.valueOf(i);
+				}%>
+		<a href="jquery/<%=exam%>"><%=exam%></a></br>
+		<%}%>
+		
+		<h4>Bootstrap</h4>
 		<%for (int i = 1; i < 4; i++) {
 				String exam = "exam";
 				if (i < 10) {
@@ -40,7 +51,16 @@
 		<a href="jquery/<%=exam%>"><%=exam%></a></br>
 		<%}%>
 		
-
+		<h4>JSP </h4>
+			<%for (int i = 1; i < 4; i++) {
+				String exam = "exam";
+				if (i < 10) {
+					exam += "0" + i;
+				} else {
+					exam += String.valueOf(i);
+				}%>
+		<a href="jsp/<%=exam%>"><%=exam%></a></br>
+		<%}%>
 
 	</body>
 </html>
