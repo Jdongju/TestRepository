@@ -5,7 +5,7 @@
 <?import javafx.geometry.*?>
 
 <StackPane fx:id="stackPane" xmlns:fx="http://javafx.com/fxml" 
-	prefHeight="500" prefWidth="350" fx:controller="ch17.exam41_Animaition2.RootController">
+	prefHeight="500" prefWidth="350" fx:controller="ch17.exam41_SceneMove2.RootController">
 	<children>
 		<BorderPane>
 			<top>
