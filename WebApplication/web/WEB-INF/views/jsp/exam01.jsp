@@ -2,11 +2,10 @@
 [지시자]
 1. 작성: <%@...%>
 2. 종류
-<%@page..%> : JSP의 실행결과
+<%@page..%> : JSP의 실행결과 JSP가 무엇을 만들어내느냐?
 <%@include ..%>
 <%@taglib ..%>
 --%>
-
 
 
 
@@ -24,12 +23,12 @@
 	</head>
 	<body>
 		<h1>다른 패키지 클래스 사용</h1>
-		<%
+		<% 
 			Calendar now = Calendar.getInstance();
 			int year=now.get(Calendar.YEAR);
 			int month=now.get(Calendar.MONTH);
 			int date= now.get(Calendar.DAY_OF_MONTH);
 		%>
-		<%=year%> 년 <%=month%> 월 <%=date%> 일
+		<%=year%> 년 <%=month%> 월 <%=date%> 일 
 	</body>
 </html>

@@ -36,7 +36,7 @@
 		<div>
 			<%request.setAttribute("name", "홍길동");%>
 			이름 : <%=request.getAttribute("name")%>
-			이름: ${name}
+			이름: ${name}  <%--controller의 request에 name이 저장 되어있어야 $가능--%>
 		</div>
 		<div>
 			<%request.setAttribute("member", new Member("홍길동", 30));%>

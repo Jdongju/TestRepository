@@ -8,7 +8,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset=UTF-8">
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<title>JSP Page</title>
 		<link href="/WebApplication/resources/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -25,11 +25,11 @@
 				}
 			}
 			function handleBtn2() {
-				var img1=document.querySelector("#img1");	//id로 찾아서 변경할떄는 querySelector
-				img1.src="/WebApplication/resources/image/photo03.jpg";
+				var img1 = document.querySelector("#img1");	//id로 찾아서 변경할떄는 querySelector
+				img1.src = "/WebApplication/resources/image/photo03.jpg";
 			}
 			function handleBtn3() {
-				var class1=document.querySelectorAll(".class1"); //class로 찾아서 변경할 떄에는 querySelectorAll
+				var class1 = document.querySelectorAll(".class1"); //class로 찾아서 변경할 떄에는 querySelectorAll
 				for (var i = 0; i < class1.length; i++) {
 					class1[i].src = "/WebApplication/resources/image/photo04.jpg";
 				}
@@ -43,13 +43,13 @@
 			<img src="/WebApplication/resources/image/photo01.jpg" width="100px" height="100px"/>
 			<img src="/WebApplication/resources/image/photo01.jpg" width="100px" height="100px"/>
 		</div>
-		
+
 		<div>
 			<button onclick="handleBtn2()" class="btn btn-success">img1의 이미지변경</button>
 			<button onclick="handleBtn3()" class="btn btn-success">class1의 이미지변경</button><br/>
-<img  id="img1" src="/WebApplication/resources/image/photo01.jpg" width="100px" height="100px"/>
-<img class="class1" src="/WebApplication/resources/image/photo01.jpg" width="100px" height="100px"/>
-<img class="class1" src="/WebApplication/resources/image/photo01.jpg" width="100px" height="100px"/>
+			<img  id="img1" src="/WebApplication/resources/image/photo01.jpg" width="100px" height="100px"/>
+			<img class="class1" src="/WebApplication/resources/image/photo01.jpg" width="100px" height="100px"/>
+			<img class="class1" src="/WebApplication/resources/image/photo01.jpg" width="100px" height="100px"/>
 		</div>
 	</body>
 </html>

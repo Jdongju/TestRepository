@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset=UTF-8">
+		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<title>JSP Page</title>
 		<link href="/WebApplication/resources/bootstrap-3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
@@ -39,9 +39,9 @@
 		</table>
 		<h3> 이미지</h3>
 		<img src="/WebApplication/resources/image/photo1.jpg" width="100" height="100"/>
-		<img class="img-rounded"src="/WebApplication/resources/image/photo1.jpg" width="100" height="100"/>
-		<img class="img-circle"src="/WebApplication/resources/image/photo1.jpg" width="100" height="100"/>
-		<img class="img-thumbnail"src="/WebApplication/resources/image/photo1.jpg" width="100" height="100"/>
+		<img class="img-rounded" src="/WebApplication/resources/image/photo1.jpg" width="100" height="100"/>
+		<img class="img-circle" src="/WebApplication/resources/image/photo1.jpg" width="100" height="100"/>
+		<img class="img-thumbnail" src="/WebApplication/resources/image/photo1.jpg" width="100" height="100"/>
 
 		<form>
 			<div class="form-group">

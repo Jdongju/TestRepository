@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta charset=UTF-8">
+		<meta charset="UTF-8">
 		<title>JSP Page</title>
 		<style type="text/css">
 			/*태그선택자(Selector)*/

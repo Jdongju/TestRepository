@@ -4,7 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
-@RequestMapping("/css")
+@RequestMapping("/css")  //공통으로 앞에 /css적용
 public class Exam03CssController {
 
 	@RequestMapping("/exam01")
