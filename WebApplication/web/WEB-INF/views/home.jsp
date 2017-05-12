@@ -18,9 +18,9 @@
 		<a href="html/exam01" class="btn btn-warning">exam01</a>
 
 		<h4>CSS </h4>
-		<a href="css/exam01">exam01</a><br/>
-		<a href="css/exam02">exam02</a><br/>
-		<a href="css/exam03">exam03</a><br/>
+		<a href="css/exam01" class="btn btn-warning">exam01</a><br/>
+		<a href="css/exam02" class="btn btn-warning">exam02</a><br/>
+		<a href="css/exam03" class="btn btn-warning">exam03</a><br/>
 
 		<h4>JavsScript </h4>
 		<%for (int i = 1; i < 12; i++) {
@@ -30,7 +30,7 @@
 				} else {
 					exam += String.valueOf(i);
 				}%>
-		<a href="javascript/<%=exam%>"><%=exam%></a><br/> 
+		<a href="javascript/<%=exam%>" class="btn btn-warning"><%=exam%></a><br/> 
 		<%}%>
 
 		<h4>Jquery</h4>
@@ -41,7 +41,7 @@
 				} else {
 					exam += String.valueOf(i);
 				}%>
-		<a href="jquery/<%=exam%>"><%=exam%></a></br>
+		<a href="jquery/<%=exam%>" class="btn btn-warning"><%=exam%></a></br>
 		<%}%>
 
 		<h4>Bootstrap</h4>
@@ -52,7 +52,7 @@
 				} else {
 					exam += String.valueOf(i);
 				}%>
-		<a href="jquery/<%=exam%>"><%=exam%></a></br>
+		<a href="jquery/<%=exam%>" class="btn btn-warning"><%=exam%></a></br>
 		<%}%>
 
 		<h4>JSP </h4>
@@ -63,12 +63,12 @@
 				} else {
 					exam += String.valueOf(i);
 				}%>
-		<a href="jsp/<%=exam%>"><%=exam%></a></br>
+		<a href="jsp/<%=exam%>" class="btn btn-warning"><%=exam%></a></br>
 		<%}%>
 
 		<h4>HTTP</h4>
 		<h5>1. 요청방식</h5>
-		1. GET 방식 : <a href="http/exam01">exam01</a><br/>
+		1. GET 방식 : <a href="http/exam01" class="btn btn-warning">exam01</a><br/>
 		2. POST 방식 : 
 		<form method="post" action="http/exam01" style="display: inline">
 			<input type="submit" value="exam01" class="btn btn-primary"/>
@@ -78,5 +78,12 @@
 		<%-- bno, type, hobby 등등은 요청 파라미터이다 요청파라미터에서 동일한 값을 찾아서 대입해준다.,--%>
 		<a href="http/exam02?type=freeboard&bno=5&hobby=baseball&hobby=soccer" class="btn btn-primary"> exam02</a>
 		<a href="http/exam03?type=freeboard&bno=5&hobby=baseball&hobby=soccer" class="btn btn-primary"> exam02</a>
+		
+		<h4>폼 제출</h4>
+		<a href="form/exam01" class="btn btn-primary"> 회원가입양식 요청</a>
+		<h4>파일업로드</h4>
+		<a href="form/exam02" class="btn btn-primary"> 회원가입양식 요청</a>
+		
+		
 	</body>
 </html>

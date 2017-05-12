@@ -19,6 +19,7 @@
 				class="org.springframework.web.servlet.view.InternalResourceViewResolver"
 				p:prefix="/WEB-INF/views/"
 				p:suffix=".jsp" />
-
-	
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/> <!-- 멀티파트를 해석할 수 있도록 스프링에서 제공해주는것 -->
+					<!-- Commons는 아파치의 라이브러리이며 이 라이브러리에서 일부를 참조한다. -->
 </beans>

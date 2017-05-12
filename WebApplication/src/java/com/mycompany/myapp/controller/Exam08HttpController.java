@@ -55,12 +55,12 @@ public class Exam08HttpController {
 	@RequestMapping("/exam03")
 	public String exam03(
 					@RequestParam String type,
-					@RequestParam int bno,
+					@RequestParam int boardNo,
 					String[] hobby,//home.jsp의 hobby와 일치하면 baeball이란 값을 hobby에 넣어준다.
 					@RequestHeader ("User-Agent") String userAgent,
 					Model model) {
 		model.addAttribute("type", type);// 데이터를 진짜로 넘겨줄때는 Model View Cotroller 중 Model로 넘겨준다.
-		model.addAttribute("bno", bno); //앞의것은 키, 뒤의것은 속성 키를 바탕으로 jsp에서 $()로 찾는다.
+		model.addAttribute("bno", boardNo); //앞의것은 키, 뒤의것은 속성 키를 바탕으로 jsp에서 $()로 찾는다.
 		model.addAttribute("userAgent", userAgent); //앞의것은 키, 뒤의것은 속성 키를 바탕으로 jsp에서 $()로 찾는다.
 		model.addAttribute("hobby", hobby); //앞의것은 키, 뒤의것은 속성 키를 바탕으로 jsp에
 		return "http/exam03";
