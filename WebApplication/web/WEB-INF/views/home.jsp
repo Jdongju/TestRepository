@@ -16,12 +16,12 @@
 		<hr/>
 		<h4>html태그 </h4>
 		<a href="html/exam01" class="btn btn-warning">exam01</a>
-
+<br/> 
 		<h4>CSS </h4>
-		<a href="css/exam01" class="btn btn-warning">exam01</a><br/>
-		<a href="css/exam02" class="btn btn-warning">exam02</a><br/>
-		<a href="css/exam03" class="btn btn-warning">exam03</a><br/>
-
+		<a href="css/exam01" class="btn btn-warning">exam01</a>
+		<a href="css/exam02" class="btn btn-warning">exam02</a>
+		<a href="css/exam03" class="btn btn-warning">exam03</a>
+		<br/>
 		<h4>JavsScript </h4>
 		<%for (int i = 1; i < 12; i++) {
 				String exam = "exam";
@@ -30,9 +30,9 @@
 				} else {
 					exam += String.valueOf(i);
 				}%>
-		<a href="javascript/<%=exam%>" class="btn btn-warning"><%=exam%></a><br/> 
+		<a href="javascript/<%=exam%>" class="btn btn-warning"><%=exam%></a>
 		<%}%>
-
+		<br/> 
 		<h4>Jquery</h4>
 		<%for (int i = 1; i < 5; i++) {
 				String exam = "exam";
@@ -41,8 +41,9 @@
 				} else {
 					exam += String.valueOf(i);
 				}%>
-		<a href="jquery/<%=exam%>" class="btn btn-warning"><%=exam%></a></br>
+		<a href="jquery/<%=exam%>" class="btn btn-warning"><%=exam%></a>
 		<%}%>
+		</br>
 
 		<h4>Bootstrap</h4>
 		<%for (int i = 1; i < 4; i++) {
@@ -52,9 +53,9 @@
 				} else {
 					exam += String.valueOf(i);
 				}%>
-		<a href="jquery/<%=exam%>" class="btn btn-warning"><%=exam%></a></br>
+		<a href="jquery/<%=exam%>" class="btn btn-warning"><%=exam%></a>
 		<%}%>
-
+		</br>
 		<h4>JSP </h4>
 		<%for (int i = 1; i < 4; i++) {
 				String exam = "exam";
@@ -63,9 +64,9 @@
 				} else {
 					exam += String.valueOf(i);
 				}%>
-		<a href="jsp/<%=exam%>" class="btn btn-warning"><%=exam%></a></br>
+		<a href="jsp/<%=exam%>" class="btn btn-warning"><%=exam%></a>
 		<%}%>
-
+</br>
 		<h4>HTTP</h4>
 		<h5>1. 요청방식</h5>
 		1. GET 방식 : <a href="http/exam01" class="btn btn-warning">exam01</a><br/>
@@ -86,5 +87,9 @@
 		<h4>파일다운로드</h4>
 		<a href="file/exam03" class="btn btn-primary"> 파일로 저장</a>
 		<img src="file/exam03" width="100" height="100"/>
+		
+		<h4>의존성 주입</h4>
+		<a href="di/exam01" class="btn btn-primary"> 회원가입</a>
+		<a href="di/exam02" class="btn btn-primary"> 로그인</a>
 	</body>
 </html>

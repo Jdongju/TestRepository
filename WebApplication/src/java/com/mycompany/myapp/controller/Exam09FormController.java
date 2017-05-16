@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.OutputStream;
+import java.net.URLEncoder;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.servlet.ServletContext;
@@ -12,10 +13,12 @@ import org.apache.catalina.tribes.util.Arrays;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.util.FileCopyUtils;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.MultipartFile;
+import static sun.net.www.protocol.http.HttpURLConnection.userAgent;
 
 @Controller
 public class Exam09FormController {
@@ -74,23 +77,32 @@ public class Exam09FormController {
 	}
 
 	@RequestMapping("file/exam03")
-	public void download(HttpServletResponse response) throws IOException {
+	public void download(HttpServletResponse response, @RequestHeader("User-Agent") String userAgent) throws IOException {
 //		return "file/download"; //다운로드는 페이지를 요청한것이 아니다. 그래서 리턴페이지가 필요없당.
 
 //		응답 HTTP 헤더행을 추가
 //		1)파일이름(옵션)
-		String fileName="Penguins.jpg";
-		response.addHeader("Content-Disposition", "attachment; filename=\""+fileName+ "\""); //첨부파일이기 때문에 저장 다이얼로그를 띄우는 등의 행동을 해야한다.
+		String fileName = "펭귄.jpg";
+		String encodingFileName;
+		if (userAgent.contains("MSIE") || userAgent.contains("Trident")||userAgent.contains("edge")) {  //파일이름이 한글일 경우 파일이름 인코딩이 필요하다.
+			encodingFileName=URLEncoder.encode(fileName, "UTF-8");
+		} else {
+			encodingFileName= new String(fileName.getBytes("UTF-8"), "ISO-8859-1");
+		}
+		System.out.println(encodingFileName);		
+		
+		response.addHeader("Content-Disposition", "attachment; filename=\"" +encodingFileName + "\""); //첨부파일이기 때문에 저장 다이얼로그를 띄우는 등의 행동을 해야한다.
 		//역슬래시(\") 넣는 이유는 공백을 읽어들이도록 하기 위해서이다.,
 //		2)파일 종류(필수)
 		response.addHeader("Content-Type", "image/jpeg");
 //		3) 파일의 크기(옵션)
-		File file= new File(servletContext.getRealPath("/WEB-INF/upload/Penguins.jpg")); //절대경로를 얻는다.
-		long fileSize=file.length();
+		File file = new File(servletContext.getRealPath("/WEB-INF/upload/펭귄.jpg")); //절대경로를 얻는다.
+		long fileSize = file.length();
 		response.addHeader("Content-Length", String.valueOf(fileSize));//스트링으로 받아야하기 때문에 String.valueOf를 쓴다.
+
 		//응답 HTTP본문에 파일 데이터를 출력
 		OutputStream os = response.getOutputStream();
-		FileInputStream fis=new FileInputStream(file);
+		FileInputStream fis = new FileInputStream(file);
 //		byte[] data= new byte[1024];
 //		int readBytes=-1;
 //		while(true){
@@ -98,7 +110,7 @@ public class Exam09FormController {
 //			os.write(data, 0, readBytes);
 //		}
 //		os.flush();
-		
+
 		//위의것을 하나로 만든 메소드
 		FileCopyUtils.copy(fis, os);
 		os.flush();
