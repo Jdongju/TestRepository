@@ -78,12 +78,13 @@
 		<%-- bno, type, hobby 등등은 요청 파라미터이다 요청파라미터에서 동일한 값을 찾아서 대입해준다.,--%>
 		<a href="http/exam02?type=freeboard&bno=5&hobby=baseball&hobby=soccer" class="btn btn-primary"> exam02</a>
 		<a href="http/exam03?type=freeboard&bno=5&hobby=baseball&hobby=soccer" class="btn btn-primary"> exam02</a>
-		
+
 		<h4>폼 제출</h4>
 		<a href="form/exam01" class="btn btn-primary"> 회원가입양식 요청</a>
 		<h4>파일업로드</h4>
 		<a href="form/exam02" class="btn btn-primary"> 회원가입양식 요청</a>
-		
-		
+		<h4>파일다운로드</h4>
+		<a href="file/exam03" class="btn btn-primary"> 파일로 저장</a>
+		<img src="file/exam03" width="100" height="100"/>
 	</body>
 </html>
