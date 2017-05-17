@@ -24,25 +24,47 @@ public class RgbLed {
 		bluePin.setShutdownOptions(true,PinState.LOW);
 	}
 
-	public void red() {
-		redPin.low();
-		greenPin.high();
-		bluePin.high();
-
+	public void rgb(boolean red, boolean green, boolean blue) { //3가지 섹상 동시에 제어해야할 경우
+		
+		if(red) {
+			redPin.low();
+		}else{
+			redPin.high();
+		}
+		
+		if(green) {
+			greenPin.low();
+		}else{
+			greenPin.high();
+		}
+		
+		if(blue) {
+			bluePin.low();
+		}else{
+			bluePin.high();
+		}
 	}
 
-	public void green() {
-		redPin.high();
-		greenPin.low();
-		bluePin.high();
-
+	public void red(boolean state){  //그 색만 바꾸는것
+		if(state==true){
+			redPin.low();
+		}else{
+			redPin.high();
+		}
 	}
-
-	public void blue() {
-		redPin.high();
-		greenPin.high();
-		bluePin.low();
-
+	public void green(boolean state){
+		if(state==true){
+			greenPin.low();
+		}else{
+			greenPin.high();
+		}
+	}
+	public void blue(boolean state){
+		if(state==true){
+			bluePin.low();
+		}else{
+			bluePin.high();
+		}
 	}
 	
 	public static void main(String[] args) throws InterruptedException {
@@ -55,11 +77,11 @@ public class RgbLed {
 //			Thread.sleep(500);
 //		}
 		while (true) {			
-			test.green();
+			test.rgb(true,false,false);
 			Thread.sleep(1000);
-			test.red();
+			test.rgb(false,true,false);
 			Thread.sleep(1000);
-			test.blue();
+			test.rgb(false,false,true);
 			Thread.sleep(1000);
 		}
 

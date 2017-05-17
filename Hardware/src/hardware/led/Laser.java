@@ -29,13 +29,6 @@ public class Laser {
 	
 	public static void main(String[] args) throws InterruptedException {
 		Laser test= new Laser(RaspiPin.GPIO_04);
-//		test.green();
-//		for (int i = 0; i < 10; i++) {
-//			test.red();
-//			Thread.sleep(500);
-//			test.green();
-//			Thread.sleep(500);
-//		}
 		while (true) {			
 			test.shoot();
 			Thread.sleep(1000);
