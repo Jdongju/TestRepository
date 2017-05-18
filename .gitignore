@@ -17,3 +17,6 @@
 /Hardware/nbproject/private/
 /Hardware/dist/
 /Hardware/build/
+/test/nbproject/private/
+/test/build/
+/test/dist/
