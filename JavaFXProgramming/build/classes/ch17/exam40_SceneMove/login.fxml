@@ -5,7 +5,7 @@
 <?import javafx.geometry.*?>
 
 <BorderPane  xmlns:fx="http://javafx.com/fxml" 
-	fx:id="login" prefHeight="500" prefWidth="350" fx:controller="ch17.exam40_Animaition.LoginController">
+	fx:id="login" prefHeight="500" prefWidth="350" fx:controller="ch17.exam40_SceneMove.LoginController">
 	<top>
 		<BorderPane style="-fx-background-color: #eaeaea;">
 			<left>
