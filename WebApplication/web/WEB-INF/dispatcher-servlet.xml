@@ -14,11 +14,15 @@
 	<context:component-scan base-package="com.mycompany.myapp"/>
 	
 	   
-	
+
+
 	<bean id="viewResolver"
-				class="org.springframework.web.servlet.view.InternalResourceViewResolver"
+				class="org.springframework.web.servlet.view.InternalResourceViewResolver"  <!-- 이 클래스로 뷰리졸버를 관리한다.-->
 				p:prefix="/WEB-INF/views/"
 				p:suffix=".jsp" />
+				<!-- 세터주입과같이 아래처럼 해도 됨-->
+				<!--	<property name="prefix" value="/WEB-INF/views"/>
+	<property name="suffix" value=".jsp"/>-->
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver"/> <!-- 멀티파트를 해석할 수 있도록 스프링에서 제공해주는것 -->
 					<!-- Commons는 아파치의 라이브러리이며 이 라이브러리에서 일부를 참조한다. -->
