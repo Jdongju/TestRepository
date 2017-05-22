@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<!--Maven 설정 스펙의 버전  -->
+  <modelVersion>4.0.0</modelVersion>
+  <!-- 프로젝트를 개발하는 회사의 도메인  -->
+  <groupId>com.mycompany</groupId>
+  <!--프로젝트의 식별명(중복 불가)  -->
+  <artifactId>SpringWebProgramming</artifactId>
+  <!--프로젝트의 버전  -->
+  <version>0.0.1-SNAPSHOT</version>
+  <!--프로젝트의 최종 산출물의 형태  -->
+  <packaging>war</packaging>
+  <!--프로젝트의 이름-->
+  <name>SpringWebProgramming</name>
+  <!--프로젝트 설명  -->
+  <description>Test project to study Spring</description>
+  
+  <!--의존성 라이브러리 설정  -->
+  
+  
+  
+ <!--프로젝트를 빌드할 때 사용할 정보 설정  -->
+  <build>
+    <sourceDirectory>src</sourceDirectory>
+    <plugins>
+      <plugin>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.5.1</version>
+        <configuration>
+          <source>1.8</source>
+          <target>1.8</target>
+        </configuration>
+      </plugin>
+      <plugin>
+        <artifactId>maven-war-plugin</artifactId>
+        <version>3.0.0</version>
+        <configuration>
+          <warSourceDirectory>WebContent</warSourceDirectory>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
