@@ -19,7 +19,13 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
   <description>Test project to study Spring</description>
   
   <!--의존성 라이브러리 설정  -->
-  
+  <dependencies>
+  	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-webmvc</artifactId>
+  		<version>4.3.8.RELEASE</version>
+  	</dependency>
+  </dependencies>
   
   
  <!--프로젝트를 빌드할 때 사용할 정보 설정  -->
