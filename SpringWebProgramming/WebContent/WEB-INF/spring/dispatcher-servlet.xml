@@ -29,7 +29,19 @@
 	<bean id="multipartResolver"
 		class="org.springframework.web.multipart.commons.CommonsMultipartResolver" />
 
+	<bean id="exam10Dao2" class="com.mycompany.myapp.dao.Exam10Dao2Impl" />
 
-
-
+	<!--Setter 주입  -->
+	<bean id="exam10Service4" class="com.mycompany.myapp.service.Exam10Service4Impl">
+		<property name="exam10Dao" ref="exam10Dao2"></property>
+	</bean>
+	<!-- <bean id= "exam10Service4" class="com.mycompany.myapp.service.Exam10Service4Impl" 
+		p:exam10Dao-ref="exam10Dao2"/> -->
+	<!--객체 참조하여 exam10Dao2를 exam10service4Impl의 매게값으로 넣어야 set이 실행되어 exam10Dao에 
+		대입 가능 -->
+		
+	<!--생성자주입  -->
+	<bean id="exam10Service5" class="com.mycompany.myapp.service.Exam10Service5Impl">
+		<constructor-arg ref="exam10Dao2"></constructor-arg>
+	</bean>
 </beans>
