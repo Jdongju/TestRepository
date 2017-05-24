@@ -1,7 +1,7 @@
 package test;
 
 import com.pi4j.io.gpio.RaspiPin;
-import hardware.Sensor.UltrasonicSensor;
+import hardware.sensor.UltrasonicSensor;
 import hardware.buzzer.ActiveBuzzer;
 import java.io.IOException;
 

@@ -2,7 +2,7 @@ package test;
 
 import com.pi4j.io.gpio.PinState;
 import com.pi4j.io.gpio.RaspiPin;
-import hardware.Sensor.TrackingSensor;
+import hardware.sensor.TrackingSensor;
 import hardware.buzzer.ActiveBuzzer;
 import java.io.IOException;
 import java.util.logging.Level;
