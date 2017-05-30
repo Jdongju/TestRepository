@@ -1,7 +1,7 @@
 package com.mycompany.myapp.controller;
 
-import com.mycompany.myapp.dto.Board;
-import com.mycompany.myapp.dto.Member;
+import com.mycompany.myapp.dto.Exam07Board;
+import com.mycompany.myapp.dto.Exam07Member;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -35,7 +35,7 @@ public class Exam07JspController {
 		// request라는 객체는 톰캣이 만들어서준다.
 		//jsp가 request를 받으면 EL을 이용해서 데이터를 얻는다.
 		//request
-		request.setAttribute("member2", new Member("홍길동", 30));
+		request.setAttribute("member2", new Exam07Member("홍길동", 30));
 		return "jsp/exam04";
 	}
 
@@ -45,9 +45,9 @@ public class Exam07JspController {
 //		model을 매개변수로 하는 이유는 컨트롤러에서 데이터를 JSP에 전달하기 위해서.
 //request대신 model을 사용하는것.
 		model.addAttribute("name3", "홍길동");
-		model.addAttribute("member3", new Member("홍길동", 30));
+		model.addAttribute("member3", new Exam07Member("홍길동", 30));
 
-		Board board = new Board();
+		Exam07Board board = new Exam07Board();
 		board.setBno(1);
 		board.setBtitle("오늘은 휴가 전날");
 		board.setBcontent("휴가떄 과제할 내용을 준비해야합니다.");
@@ -56,9 +56,9 @@ public class Exam07JspController {
 
 		model.addAttribute("board", board);
 
-		List<Board> list = new ArrayList<Board>();
+		List<Exam07Board> list = new ArrayList<Exam07Board>();
 		for (int i = 1; i <= 10; i++) {
-			Board b = new Board();
+			Exam07Board b = new Exam07Board();
 			b.setBno(i);
 			b.setBtitle("제목"+i);
 			b.setBcontent("내용입니다. 장비가 와야할텐데..."+i);

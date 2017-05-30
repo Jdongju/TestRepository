@@ -26,7 +26,7 @@
 			이름: <%=name%>
 		</div>
 		<div>
-			<%Member member = new Member("홍길동", 30);%>
+			<%Exam07Member member = new Exam07Member("홍길동", 30);%>
 			이름:<%=member.getName()%>
 			나이:<%=member.getAge()%>
 		</div>
@@ -39,8 +39,8 @@
 			이름: ${name}  <%--controller의 request에 name이 저장 되어있어야 $가능--%>
 		</div>
 		<div>
-			<%request.setAttribute("member", new Member("홍길동", 30));%>
-			이름:<%=((Member)request.getAttribute("member")).getName()%> <%-- Object로 리턴하기때문에 형변환한다.--%>
+			<%request.setAttribute("member", new Exam07Member("홍길동", 30));%>
+			이름:<%=((Exam07Member)request.getAttribute("member")).getName()%> <%-- Object로 리턴하기때문에 형변환한다.--%>
 			이름:${member.name}<br/>
 			나이:${member.age}
 		</div>
@@ -48,7 +48,7 @@
 			이름: <%=request.getAttribute("name2")%>
 			이름:${name2}<br/>
 			
-			이름:<%=((Member)request.getAttribute("member2")).getName()%>
+			이름:<%=((Exam07Member)request.getAttribute("member2")).getName()%>
 			이름:${member.name}<br/>
 			나이:${member.age}
 		</div>
