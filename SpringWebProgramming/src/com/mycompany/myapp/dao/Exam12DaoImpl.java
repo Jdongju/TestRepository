@@ -5,6 +5,8 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,9 +20,9 @@ public class Exam12DaoImpl implements Exam12Dao {
 	private static final Logger LOGGER = LoggerFactory.getLogger(Exam12DaoImpl.class);
 	
 	Connection conn= null;
-	//insert는 보통 Primary jl
+	//insert는 보통 Primary key
 	@Override
-	public int insert1(Exam12Board board) {
+	public int boardInsert(Exam12Board board) {
 		int bno=-1;
 //		Connection conn = null;
 		try {
@@ -72,7 +74,107 @@ public class Exam12DaoImpl implements Exam12Dao {
 		return bno;
 	}
 	@Override
-	public String insert2(Exam12Member member) {
+	public List<Exam12Board> boardSelectAll() {
+		List<Exam12Board> list= new ArrayList<>();
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			String url="jdbc:oracle:thin:@localhost:1521:orcl";
+			conn=DriverManager.getConnection(url,"iotuser", "iot12345");
+			LOGGER.info("연결성공");
+			// SQL 작성
+			String sql = "select bno, btitle, bwriter, bdate, bhitcount "; //마지막에 하나씩 띄어쓰기 해주어야 한다. from을 인식 하기 위해
+					sql+= "from board ";
+					sql+= "order by bno desc ";
+		
+			// SQL문을 전송해서 실행
+			//테이블 정의시 컬럼의 속성으로 자동 증가를 지정할 수 있는 DB일 경우(MySQL, MS SQL)
+//			PreparedStatement pstmt = conn.prepareStatement(sql,Statement.RETURN_GENERATED_KEYS);
+			// 오라클일 경우 Sequence 외부객체로 자동증가값을 얻기 때문에 다음과 같이 지정.
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.executeQuery(); //Select를 실행할때는 executeUpdate(행추가)가 아니라 executeQuery
+			ResultSet rs=pstmt.executeQuery();
+			while(rs.next()){
+				Exam12Board board= new Exam12Board();
+				board.setBno(rs.getInt("bno"));
+				board.setBtitle(rs.getString("btitle"));
+				board.setBwriter(rs.getString(3));
+				board.setBdate(rs.getDate("bdate"));
+				board.setBhitcount(rs.getInt("bhitcount"));
+				list.add(board);
+			}
+			rs.close();
+			
+			pstmt.close();
+		
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			// 연결끊기
+			try {
+				conn.close();
+				LOGGER.info("연결 끊김");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}
+	@Override
+	public List<Exam12Board> boardSelectPage(int pageNo, int rowsPerPage) {
+		List<Exam12Board> list= new ArrayList<>();
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			String url="jdbc:oracle:thin:@localhost:1521:orcl";
+			conn=DriverManager.getConnection(url,"iotuser", "iot12345");
+			LOGGER.info("연결성공");
+			// SQL 작성
+			String sql = "select * ";
+			sql+="from ( ";
+			sql+= "select rownum as r, bno, btitle, bwriter, bdate, bhitcount ";
+			sql+=" from ( ";
+			sql+=" select bno, btitle, bwriter, bdate, bhitcount from board order by bno desc ";
+			sql+=") ";
+			sql+="where rownum<=? ";
+			sql+=") ";
+			sql+="where r>=? ";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.setInt(1, (pageNo*rowsPerPage));
+			pstmt.setInt(2, ((pageNo-1)*rowsPerPage+1));
+			pstmt.executeQuery(); //Select를 실행할때는 executeUpdate(행추가)가 아니라 executeQuery
+			ResultSet rs=pstmt.executeQuery();
+			while(rs.next()){
+				Exam12Board board= new Exam12Board();
+				board.setBno(rs.getInt("bno"));
+				board.setBtitle(rs.getString("btitle"));
+				board.setBwriter(rs.getString(3));
+				board.setBdate(rs.getDate("bdate"));
+				board.setBhitcount(rs.getInt("bhitcount"));
+				list.add(board);
+			}
+			rs.close();
+			
+			pstmt.close();
+		
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			// 연결끊기
+			try {
+				conn.close();
+				LOGGER.info("연결 끊김");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}
+	////////////////////////////////////////////////////////////////////////////////////////////////////////
+	@Override
+	public String memberInsert(Exam12Member member) {
 		String mid=null;
 		try {
 			Class.forName("oracle.jdbc.OracleDriver");
@@ -118,13 +220,197 @@ public class Exam12DaoImpl implements Exam12Dao {
 		}
 		return mid;
 	}
-	public static void main(String[] args) {
-		Exam12DaoImpl test = new Exam12DaoImpl();
-		Exam12Member member = new Exam12Member();
 	
-//		LOGGER.info("추가된 행위 bon: "+bno);
+	@Override
+	public int boardCountAll() {
+		int count=0;
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			String url="jdbc:oracle:thin:@localhost:1521:orcl";
+			conn=DriverManager.getConnection(url,"iotuser", "iot12345");
+			LOGGER.info("연결성공");
+			// SQL 작성
+			String sql = "select count(*) from board";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.executeQuery(); //Select를 실행할때는 executeUpdate(행추가)가 아니라 executeQuery
+			ResultSet rs=pstmt.executeQuery();
+			rs.next();//일단 first로 이동
+			count=rs.getInt(1); //첫번째 bno리턴
+			rs.close();
+			pstmt.close();
+		
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			// 연결끊기
+			try {
+				conn.close();
+				LOGGER.info("연결 끊김");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return count;
+	}
+	@Override
+	public List<Exam12Member> memberSelectAll() {
+		List<Exam12Member> list= new ArrayList<>();
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			String url="jdbc:oracle:thin:@localhost:1521:orcl";
+			conn=DriverManager.getConnection(url,"iotuser","iot12345");
+			LOGGER.info("연결 성공");
+			String sql="select mid, mname, mpassword, mdate, mtel, memail, mage, maddress ";
+			sql+="from member ";
+			sql+="order by mid desc ";
+			PreparedStatement pstmt=conn.prepareStatement(sql);
+			pstmt.executeQuery();
+			ResultSet rs= pstmt.executeQuery();
+			while(rs.next()){
+				Exam12Member member= new Exam12Member();
+				member.setMid(rs.getString("mid"));
+				member.setMname(rs.getString("mname"));
+				member.setMpassword(rs.getString("mpassword"));
+				member.setMdate(rs.getDate("mdate"));
+				member.setMtel(rs.getString("mtel"));
+				member.setMemail(rs.getString("memail"));
+				member.setMage(rs.getInt("mage"));
+				member.setMaddress(rs.getString("maddress"));
+				list.add(member);
+			}
+			rs.close();
+			pstmt.close();
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				conn.close();
+				LOGGER.info("연결 끊김");
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return list;
+	}
+	@Override
+	public int memberCountAll() {
+		int count=0;
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			String url="jdbc:oracle:thin:@localhost:1521:orcl";
+			conn=DriverManager.getConnection(url, "iotuser", "iot12345");
+			LOGGER.info("연결 성공");
+			String sql="select count(*) from member";
+			PreparedStatement pstmt= conn.prepareStatement(sql);
+			pstmt.executeQuery();
+			ResultSet rs= pstmt.executeQuery();
+			rs.next();
+			count=rs.getInt(1);
+			rs.close();
+			pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				conn.close();
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		return count;
 	}
 
-	
-	
+	@Override //몇행부터 몇행까지 실행할 것인가?
+	public List<Exam12Member> memberSelectPage(int pageNo, int rowsPerPage) {
+		List<Exam12Member> list= new ArrayList<>();
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			String url="jdbc:oracle:thin:@localhost:1521:orcl";
+			conn=DriverManager.getConnection(url,"iotuser","iot12345");
+			LOGGER.info("연결 성공");
+			String sql="select * ";
+			sql+="from ( ";
+			sql+="select rownum as r, mid, mname, mpassword, mdate, mtel, memail, mage, maddress ";
+			sql+="from ( ";
+			sql+="select mid, mname, mpassword, mdate, mtel, memail, mage, maddress from member order by mid desc";
+			sql+= ") ";
+			sql+= "where rownum<=?";
+			sql+= ") ";
+			sql+="where r>=?";
+			
+			PreparedStatement pstmt= conn.prepareStatement(sql);
+			pstmt.setInt(1, (pageNo*rowsPerPage));
+			pstmt.setInt(2, ((pageNo-1)*rowsPerPage+1));
+			pstmt.executeQuery();
+			ResultSet rs= pstmt.executeQuery();
+			while(rs.next()){
+				Exam12Member member= new Exam12Member();
+				member.setMid(rs.getString("mid"));
+				member.setMname(rs.getString("mname"));
+				member.setMpassword(rs.getString("mpassword"));
+				member.setMdate(rs.getDate("mdate"));
+				member.setMtel(rs.getString("mtel"));
+				member.setMemail(rs.getString("memail"));
+				member.setMage(rs.getInt("mage"));
+				member.setMaddress(rs.getString("maddress"));
+				list.add(member);
+			}
+			rs.close();
+			pstmt.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				conn.close();
+				LOGGER.info("연결 끊김");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+		
+		return list;
+	}
+	public static void main(String[] args) {
+		Exam12DaoImpl test = new Exam12DaoImpl();
+		/*for(int i=1; i<=100; i++){
+			Exam12Board board= new Exam12Board();
+			board.setBtitle("제목"+i);
+			board.setBcontent("내용" +i);
+			board.setBwriter("홍길동");
+			board.setBpassword("12345");
+			board.setBoriginalfilename("a.png");
+			board.setBsavedfilename("a44555.png");
+			board.setBfilecontent("image/png");
+			int bno=test.insert1(board);
+			LOGGER.info("추가된 행의 bno: "+bno);
+		}*/
+		for(int i=1; i<=100; i++){
+			Exam12Member member= new Exam12Member();
+			member.setMid("아이디"+i);
+			member.setMname("홍길동");
+			member.setMpassword("iot12345");
+			member.setMtel("010-548-6678");
+			member.setMemail("dj9110@naver.com");
+			member.setMage(i);
+			member.setMaddress("샤울");
+			String mid=test.memberInsert(member);
+			LOGGER.info("추가된 행의 mid: "+mid);
+		}
+		/*List<Exam12Board> list= test.boardSelectPage(2, 10);
+		for(Exam12Board board : list){
+			LOGGER.info(board.getBtitle());
+		}*/
+//		List<Exam12Member> list= test.memberSelectPage(2, 10);
+//		for(Exam12Member member: list){
+//			LOGGER.info(member.getm);
+//		}
+		
+	}
 }
