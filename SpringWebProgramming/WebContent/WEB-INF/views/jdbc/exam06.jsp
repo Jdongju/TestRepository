@@ -23,10 +23,10 @@
 	</hr>
 	<table class="table table-bordered" style="width: 700px">
 		<tr class="success">
-			<td>번호</td>
+			<td>아이디</td>
 			<td>이름</td>
 			<td>비밀번호</td>
-			<td>날짜</td>
+			<td>가입날짜</td>
 			<td>전화번호</td>
 			<td>이메일</td>
 			<td>나이</td>
@@ -36,9 +36,8 @@
 			<%--model에 저장된 List내용을 불러와서 b에 저장한다. --%>
 			<tr>
 				<td>${m.mid}</td>
-				<td>${m.mname}</td>
+				<td><a href="exam06Detail?mid=${m.mid}">${m.mname}</a></td><!--GET방식으로 PK mid에 관한 페이지를 찾을 수 있도록 넘겨준다.  -->
 				<td>${m.mpassword}</td>
-				<td>${m.mdate}</td>
 				<td>${m.mdate}</td>
 				<td>${m.mtel}</td>
 				<td>${m.memail}</td>
@@ -65,7 +64,10 @@
 		
 		<a href="exam06?pageNo=${totalPageNo}">[맨끝]</a>
 	</div>
-
+	
+	<div style="margin-top: 10px; width: 700px; text-align: right">
+		<a href="exam02" class="btn btn-success">글쓰기</a><!--글쓰기 버튼 추가  -->
+	</div>
 
 
 </body>

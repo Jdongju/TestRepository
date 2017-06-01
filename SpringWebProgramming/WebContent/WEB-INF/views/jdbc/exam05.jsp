@@ -33,7 +33,7 @@
 			<%--model에 저장된 List내용을 불러와서 b에 저장한다. --%>
 			<tr>
 				<td>${b.bno}</td>
-				<td>${b.btitle}</td>
+				<td><a href="exam05Detail?bno=${b.bno}" >${b.btitle}</a></td><!--GET방식으로 넘기기 게시물식별값으로 쓰이는 PK값 이용 -->
 				<td>${b.bwriter}</td>
 				<td>${b.bdate}</td>
 				<td>${b.bhitcount}</td>
@@ -59,7 +59,8 @@
 		<a href="exam05?pageNo=${totalPageNo}">[맨끝]</a>
 	</div>
 
-
-
+	<div style="margin-top: 10px; width: 700px; text-align: right">
+		<a href="exam02" class="btn btn-success">글쓰기</a>
+	</div>
 </body>
 </html>
