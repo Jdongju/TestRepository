@@ -11,6 +11,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.mycompany.myapp.dto.Exam12Board;
 import com.mycompany.myapp.dto.Exam12Member;
@@ -621,25 +622,25 @@ public class Exam12DaoImpl implements Exam12Dao {
 	
 	public static void main(String[] args) {
 		Exam12DaoImpl test = new Exam12DaoImpl();
-		/*
-		 * for(int i=1; i<=100; i++){
-		 * Exam12Board board= new Exam12Board();
-		 * board.setBtitle("제목"+i);
-		 * board.setBcontent("내용" +i);
-		 * board.setBwriter("홍길동");
-		 * board.setBpassword("12345");
-		 * board.setBoriginalfilename("a.png");
-		 * board.setBsavedfilename("a44555.png");
-		 * board.setBfilecontent("image/png");
-		 * int bno=test.insert1(board);
-		 * LOGGER.info("추가된 행의 bno: "+bno);
-		 * }
-		 */
-		for (int i = 1; i <= 100; i++) {
+		
+		  for(int i=1; i<=100; i++){
+		  Exam12Board board= new Exam12Board();
+		  board.setBtitle("제목"+i);
+		  board.setBcontent("내용" +i);
+		  board.setBwriter("홍길동");
+		  board.setBpassword("12345");
+		 board.setBoriginalfilename("a.png");
+		  board.setBsavedfilename("a44555.png");
+		  board.setBfilecontent("image/png");
+		  int bno=test.boardInsert(board);
+		  LOGGER.info("추가된 행의 bno: "+bno);
+		  }
+		 
+		/*for (int i = 1; i <= 100; i++) {
 			Exam12Member member = new Exam12Member();
 			member.setMid("Id" + i);
 			member.setMname("홍길동");
-			member.setMpassword("iot12345");
+			member.setMpassword("12345");
 			member.setMtel("010-548-6678");
 			member.setMemail("dj9110@naver.com");
 			member.setMage(i);
@@ -649,7 +650,7 @@ public class Exam12DaoImpl implements Exam12Dao {
 			member.setMfilecontent("image/png");
 			String mid = test.memberInsert(member);
 			LOGGER.info("추가된 행의 mid: " + mid);
-		}
+		}*/
 		/*
 		 * List<Exam12Board> list= test.boardSelectPage(2, 10);
 		 * for(Exam12Board board : list){
@@ -682,17 +683,18 @@ public class Exam12DaoImpl implements Exam12Dao {
 			PreparedStatement pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, member.getMid()); // sql문 첫번째에 들어갈 값
 			pstmt.setString(2, member.getMname());// sql문 두번쨰에 들어갈 값.
-			pstmt.setString(3, member.getMtel());
-			pstmt.setString(4, member.getMemail());
-			pstmt.setInt(5, member.getMage());
-			pstmt.setString(6, member.getMaddress());
+			pstmt.setString(3, member.getMpassword());// sql문 두번쨰에 들어갈 값.
+			pstmt.setString(4, member.getMtel());
+			pstmt.setString(5, member.getMemail());
+			pstmt.setInt(6, member.getMage());
+			pstmt.setString(7, member.getMaddress());
 			if (member.getMoriginalfilename() != null) {
-				pstmt.setString(7, member.getMoriginalfilename());
-				pstmt.setString(8, member.getMsavedfilename());
-				pstmt.setString(9, member.getMfilecontent());
-				pstmt.setString(10, member.getMid());
+				pstmt.setString(8, member.getMoriginalfilename());
+				pstmt.setString(9, member.getMsavedfilename());
+				pstmt.setString(10, member.getMfilecontent());
+				pstmt.setString(11, member.getMid());
 			} else {
-				pstmt.setString(7, member.getMid());
+				pstmt.setString(8, member.getMid());
 			}
 			pstmt.executeUpdate(); // Select를 실행할때는 executeUpdate(행추가)가 아니라
 									// executeQuery
@@ -713,6 +715,43 @@ public class Exam12DaoImpl implements Exam12Dao {
 		}
 		
 	}
+
+	@Override
+	public void memberDelete(String mid) {
+		Connection conn = null;
+		try {
+			Class.forName("oracle.jdbc.OracleDriver");
+			String url = "jdbc:oracle:thin:@localhost:1521:orcl";
+			conn = DriverManager.getConnection(url, "iotuser", "iot12345");
+			LOGGER.info("연결성공");
+			// SQL 작성
+			String sql="delete from member where mid=?";
+			LOGGER.info("삭제SQL");
+			
+			PreparedStatement pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, mid); // sql문 첫번째에 들어갈 값
+			LOGGER.info("setSTring");
+			pstmt.executeUpdate(); // Select를 실행할때는 executeUpdate(행추가)가 아니라
+									// executeQuery
+			LOGGER.info("executeUpdate");
+			pstmt.close();
+			
+		} catch (ClassNotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			// 연결끊기
+			try {
+				conn.close();
+				LOGGER.info("연결 끊김");
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		
+	}
+
 
 	
 

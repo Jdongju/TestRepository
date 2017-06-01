@@ -66,7 +66,7 @@
 	</div>
 	
 	<div style="margin-top: 10px; width: 700px; text-align: right">
-		<a href="exam02" class="btn btn-success">글쓰기</a><!--글쓰기 버튼 추가  -->
+		<a href="exam02" class="btn btn-success">가입</a><!--글쓰기 버튼 추가  -->
 	</div>
 
 

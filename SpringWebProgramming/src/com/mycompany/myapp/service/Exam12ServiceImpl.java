@@ -108,6 +108,11 @@ public class Exam12ServiceImpl implements Exam12Service {
 		dao.memberUpdate(member);
 	}
 
+	@Override
+	public void memberDelete(String mid) {
+		dao.memberDelete(mid);
+	}
+
 
 
 

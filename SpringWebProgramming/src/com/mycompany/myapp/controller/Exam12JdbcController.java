@@ -258,7 +258,12 @@ public class Exam12JdbcController {
 		service.memberUpdate(member);
 		return "redirect:/jdbc/exam06Detail?mid="+member.getMid();
 	}
-	
+
+	@RequestMapping("/jdbc/exam06Delete")
+	public String exam06Delete(String mid){
+		service.memberDelete(mid);
+		return "redirect:/jdbc/exam06";
+	}
 	
 	
 }

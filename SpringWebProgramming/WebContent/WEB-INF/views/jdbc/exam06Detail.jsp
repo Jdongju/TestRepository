@@ -33,6 +33,31 @@
 					}
 				});
 			}
+			
+			function handleBtnDelete(){
+				console.log("handleBtnDelete()");
+				var mpassword=$("#mpassword").val();
+				if(mpassword==""){
+					$("#mpassword").attr("placeholder", "비밀번호를 입력하셔야합니다.");
+					$("#mpassword").css("border-color", "red");
+					return;
+				}
+				$.ajax({
+					url:"exam06CheckMpassword",
+					method:"post",
+					data:{"mid":"${member.mid}","mpassword":mpassword},
+					//data: "bno=${board.bno}&bpassword="+password,
+					success:function(data){
+						if(data.result=="success"){
+							location.href="exam06Delete?mid=${member.mid}" //성공했다면 해당 게시물 수정한다.
+						}else{
+							$("#mpassword").val("");
+							$("#mpassword").attr("placeholder", "비밀번호를 입력하셔야합니다.");
+							$("#mpassword").css("border-color", "red");
+						}
+					}
+				});
+			}
 		</script>
 	
 	</head>

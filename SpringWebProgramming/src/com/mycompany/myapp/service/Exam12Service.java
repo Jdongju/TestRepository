@@ -22,6 +22,7 @@ public interface Exam12Service {
 	public Exam12Member getMember(String mid);
 	public String memberCheckMpassword(String mid, String mpassword);
 	public void memberUpdate(Exam12Member member);
+	public void memberDelete(String mid);
 	
 }
 

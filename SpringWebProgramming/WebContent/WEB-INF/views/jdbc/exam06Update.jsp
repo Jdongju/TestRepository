@@ -27,6 +27,8 @@
 		<hr/>
 		<form method="post" style="pading: 0 20" enctype="multipart/form-data"> <%--멀티파트이면 메소드가 포스트여야만한다.--%>
 			<input type="hidden" name ="mid" value="${member.mid}"/>  <!--input type이 hidden이면 사용자는 보이지 않는다.  -->
+			<input type="hidden" name ="mname" value="${member.mname}"/>
+			<input type="hidden" name ="mpassword" value="${member.mpassword}"/>
 			<div class="form-group">
 				<div class="input-group">
 					<span class="input-group-addon">
