@@ -25,22 +25,22 @@ public class PCA9685 {
 	private PCA9685GpioProvider gpioProvider; //pi4j에서 재공하는 gpioProvider;
 
 	//PCA9685의 드라이버 만드는 개념.
-	private static final Pin PWM_00 = PCA9685Pin.PWM_00;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_01 = PCA9685Pin.PWM_01;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_02 = PCA9685Pin.PWM_02;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_03 = PCA9685Pin.PWM_03;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_04 = PCA9685Pin.PWM_04;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_05 = PCA9685Pin.PWM_05;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_06 = PCA9685Pin.PWM_06;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_07 = PCA9685Pin.PWM_07;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_08 = PCA9685Pin.PWM_08;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_09 = PCA9685Pin.PWM_09;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_10 = PCA9685Pin.PWM_10;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_11 = PCA9685Pin.PWM_11;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_12 = PCA9685Pin.PWM_12;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_13 = PCA9685Pin.PWM_13;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_14 = PCA9685Pin.PWM_14;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
-	private static final Pin PWM_15 = PCA9685Pin.PWM_15;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_00 = PCA9685Pin.PWM_00;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_01 = PCA9685Pin.PWM_01;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_02 = PCA9685Pin.PWM_02;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_03 = PCA9685Pin.PWM_03;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_04 = PCA9685Pin.PWM_04;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_05 = PCA9685Pin.PWM_05;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_06 = PCA9685Pin.PWM_06;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_07 = PCA9685Pin.PWM_07;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_08 = PCA9685Pin.PWM_08;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_09 = PCA9685Pin.PWM_09;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_10 = PCA9685Pin.PWM_10;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_11 = PCA9685Pin.PWM_11;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_12 = PCA9685Pin.PWM_12;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_13 = PCA9685Pin.PWM_13;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_14 = PCA9685Pin.PWM_14;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
+	public static final Pin PWM_15 = PCA9685Pin.PWM_15;//pi4j에서 재공하는 pca9685pin을 gpioPin에 대입
 
 	private int period; //해당 장치의 period 저장할 수 있는 필드.
 
@@ -92,6 +92,7 @@ public class PCA9685 {
 
 	}
 
+	
 	public void setStep(Pin pin, int step) {
 		//step: 0~4095 장치마다 다르지 않고 PCA9685이면 고정
 		if (step >= 4096) {
