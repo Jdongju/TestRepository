@@ -96,7 +96,7 @@ public class Exam12DaoImpl implements Exam12Dao {
 																			// 하기
 																			// 위해
 			sql += "from board ";
-			sql += "order by bno desc ";
+			sql += "order by bno asc ";
 			
 			// SQL문을 전송해서 실행
 			// 테이블 정의시 컬럼의 속성으로 자동 증가를 지정할 수 있는 DB일 경우(MySQL, MS SQL)
@@ -184,7 +184,7 @@ public class Exam12DaoImpl implements Exam12Dao {
 			sql += "from ( ";
 			sql += "select rownum as r, bno, btitle, bwriter, bdate, bhitcount ";
 			sql += " from ( ";
-			sql += " select bno, btitle, bwriter, bdate, bhitcount from board order by bno desc ";
+			sql += " select bno, btitle, bwriter, bdate, bhitcount from board order by bno asc ";
 			sql += ") ";
 			sql += "where rownum<=? ";
 			sql += ") ";
@@ -622,20 +622,19 @@ public class Exam12DaoImpl implements Exam12Dao {
 	
 	public static void main(String[] args) {
 		Exam12DaoImpl test = new Exam12DaoImpl();
-		
-		  for(int i=1; i<=100; i++){
+
+		for(int i=1; i<=100; i++){
 		  Exam12Board board= new Exam12Board();
 		  board.setBtitle("제목"+i);
 		  board.setBcontent("내용" +i);
 		  board.setBwriter("홍길동");
 		  board.setBpassword("12345");
-		 board.setBoriginalfilename("a.png");
+		  board.setBoriginalfilename("member"+i+".png");
 		  board.setBsavedfilename("a44555.png");
 		  board.setBfilecontent("image/png");
 		  int bno=test.boardInsert(board);
 		  LOGGER.info("추가된 행의 bno: "+bno);
-		  }
-		 
+	  }
 		/*for (int i = 1; i <= 100; i++) {
 			Exam12Member member = new Exam12Member();
 			member.setMid("Id" + i);

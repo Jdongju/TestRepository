@@ -15,7 +15,7 @@ public class Exam12Board {
 	private String boriginalfilename;
 	private String bsavedfilename;
 	private String bfilecontent;
-	
+	private MultipartFile battach;
 	
 	public MultipartFile getBattach() {
 		return battach;
@@ -25,7 +25,7 @@ public class Exam12Board {
 		this.battach = battach;
 	}
 
-	private MultipartFile battach;
+
 
 	public String getBpassword() {
 		return bpassword;
