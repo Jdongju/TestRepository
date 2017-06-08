@@ -8,6 +8,7 @@ import java.net.URLEncoder;
 import java.util.Date;
 import java.util.List;
 
+import javax.annotation.Resource;
 import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletResponse;
 
@@ -31,7 +32,7 @@ import com.mycompany.myapp.service.Exam12Service;
 public class HomeworkController {
 	private static final Logger LOGGER = LoggerFactory.getLogger(HomeworkController.class);
 
-	@Autowired
+	@Resource(name="exam12ServiceImpl")
 	private Exam12Service service;
 
 	@Autowired

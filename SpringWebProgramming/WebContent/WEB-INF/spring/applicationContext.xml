@@ -3,5 +3,24 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
+<!-- 다른 dispatcher servlet도 사용 가능한 공통 관리 객체 등록  -->
 
+<!--  Connetcion pool(DataSource) 설정 -->
+<bean name="dataSource"
+		class="com.mchange.v2.c3p0.ComboPooledDataSource">
+		<property name="driverClass" value="oracle.jdbc.OracleDriver"/>
+		<property name="jdbcUrl" value="jdbc:oracle:thin:@localhost:1521:orcl"/>
+		<property name="user" value="iotuser"></property>
+		<property name="password" value="iot12345"></property>
+		<property name="maxPoolSize" value="1"></property>
+		<property name="initialPoolSize" value="1"></property>
+		<property name="acquireIncrement" value="1"></property>
+		<property name="minPoolSize" value="1"></property>
+		</bean>
+		
+		<!--jdbc Template 설정  -->
+		<bean name="jdbcTemplate"
+				class="org.springframework.jdbc.core.JdbcTemplate">
+			<property name="dataSource" ref="dataSource"></property>			
+		</bean>
 </beans>
