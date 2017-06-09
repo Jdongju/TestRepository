@@ -23,4 +23,19 @@
 				class="org.springframework.jdbc.core.JdbcTemplate">
 			<property name="dataSource" ref="dataSource"></property>			
 		</bean>
+		<!--Mybatis 설정  -->
+		<!-- <bean name="sqlSessionFactory"
+				class="org.mybatis.spring.SqlSessionFactoryBean">
+				<property name ="dataSource" ref="dataSource"/>
+				각 객체마다 매퍼 xml파일을 저장한다. 
+				<property name="mapperLocations" value="/WEB-INF/mybatis/*xml"/>
+		</bean>
+		
+		기본생성자가 아니기 때문에 생성자주입을 한다. 
+		Mybatis를 쓰기위한 스프링 설정파일
+		<bean name="sqlSessionTemplate"
+				class="org.mybatis.spring.SqlSessionTemplate">
+				<constructor-arg ref="sqlSessionFactory"/>
+		</bean> -->
+		
 </beans>

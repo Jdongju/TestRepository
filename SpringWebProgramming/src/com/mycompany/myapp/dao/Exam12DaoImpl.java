@@ -626,7 +626,7 @@ public class Exam12DaoImpl implements Exam12Dao {
 	
 	public static void main(String[] args) {
 		Exam12DaoImpl test = new Exam12DaoImpl();
-
+/*
 		for(int i=1; i<=100; i++){
 		  Exam12Board board= new Exam12Board();
 		  board.setBtitle("제목"+i);
@@ -638,32 +638,32 @@ public class Exam12DaoImpl implements Exam12Dao {
 		  board.setBfilecontent("image/png");
 		  int bno=test.boardInsert(board);
 		  LOGGER.info("추가된 행의 bno: "+bno);
-	  }
-		/*for (int i = 1; i <= 100; i++) {
+	  }*/
+//		for (int i = 1; i <= 2; i++) {
 			Exam12Member member = new Exam12Member();
-			member.setMid("Id" + i);
+			member.setMid("Id" + 159);
 			member.setMname("홍길동");
 			member.setMpassword("12345");
 			member.setMtel("010-548-6678");
 			member.setMemail("dj9110@naver.com");
-			member.setMage(i);
+			member.setMage(158);
 			member.setMaddress("샤울");
 			member.setMoriginalfilename("a.png");
 			member.setMsavedfilename("a123123.png");
 			member.setMfilecontent("image/png");
 			String mid = test.memberInsert(member);
 			LOGGER.info("추가된 행의 mid: " + mid);
-		}*/
+//		}
 		/*
 		 * List<Exam12Board> list= test.boardSelectPage(2, 10);
 		 * for(Exam12Board board : list){
 		 * LOGGER.info(board.getBtitle());
 		 * }
 		 */
-		// List<Exam12Member> list= test.memberSelectPage(2, 10);
-		// for(Exam12Member member: list){
-		// LOGGER.info(member.getm);
-		// }
+		/* List<Exam12Member> list= test.memberSelectPage(2, 10);
+		 for(Exam12Member member: list){
+		 LOGGER.info(member.getMid());}*/
+		
 		
 	}
 
