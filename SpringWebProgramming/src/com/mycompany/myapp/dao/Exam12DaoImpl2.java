@@ -75,9 +75,8 @@ public class Exam12DaoImpl2 implements Exam12Dao {
 	
 	@Override
 	public List<Exam12Board> boardSelectAll() {
-		
-		String sql = "select bno, btitle, bwriter, bdate, bhitcount "; // 마지막에
-																		// 하나씩띄어쓰기해주어야한다.from을인식하기위해
+		/*마지막에하나씩띄어쓰기해주어야한다.from을인식하기위해*/
+		String sql = "select bno, btitle, bwriter, bdate, bhitcount "; 
 		sql += "from board ";
 		sql += "order by bno asc ";
 		

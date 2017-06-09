@@ -121,14 +121,14 @@ public class CarPrepare {
 PCA9685 pca9685= PCA9685.getinstance();
 //		SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_11); //ultra
 //		SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_00); //steering
-SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_14);// 좌우운동. 10도일때 중앙을 향해야 함.
-//SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_15);// 상하운동. 90도일떄 정면을 바라보아야 함
-		servo.setAngle(0);
-		for (int i = 10; i <= 170; i+=10) {
-			servo.setAngle(i);
-			Thread.sleep(500);
-		}
-		servo.setAngle(90);
+//SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_14);// 상하운동. 90도일떄 정면을 바라보아야 함
+SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_15);// 좌우운동. 10도일때 중앙을 향해야 함.
+		servo.setAngle(10);
+//		for (int i = 10; i <= 170; i+=10) {
+//			servo.setAngle(i);
+//			Thread.sleep(500);
+//		}
+//		servo.setAngle(10);
 //		servo.setAngle(0);
 //		servo.setAngle(90);
 //		servo.setAngle(180);
