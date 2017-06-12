@@ -626,8 +626,8 @@ public class Exam12DaoImpl implements Exam12Dao {
 	
 	public static void main(String[] args) {
 		Exam12DaoImpl test = new Exam12DaoImpl();
-/*
-		for(int i=1; i<=100; i++){
+
+	/*	for(int i=1; i<=2; i++){
 		  Exam12Board board= new Exam12Board();
 		  board.setBtitle("제목"+i);
 		  board.setBcontent("내용" +i);
