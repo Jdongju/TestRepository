@@ -1,6 +1,7 @@
 package coap.exam02.client;
 
 
+import hardware.converter.PCF8591;
 import org.eclipse.californium.core.CoapClient;
 import org.eclipse.californium.core.CoapResponse;
 import org.eclipse.californium.core.coap.CoAP;
@@ -11,7 +12,8 @@ public class CoapResource02Client {
 
 	//Field
 	private CoapClient coapClient;
-
+	private PCF8591 pcf8591;
+	private int temperature;
 	//Constructor
 	public CoapResource02Client() {
 		coapClient = new CoapClient();

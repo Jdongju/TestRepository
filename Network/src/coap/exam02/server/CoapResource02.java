@@ -3,6 +3,7 @@ package coap.exam02.server;
 import com.pi4j.io.gpio.RaspiPin;
 import hardware.motor.PCA9685;
 import hardware.motor.SG90ServoPCA9685Duration;
+import hardware.motor.SG90ServoPCA9685Step;
 import hardware.sensor.UltrasonicSensor;
 import org.eclipse.californium.core.CoapResource;
 import org.eclipse.californium.core.server.resources.CoapExchange;
@@ -11,7 +12,8 @@ import org.json.JSONObject;
 public class CoapResource02 extends CoapResource {
 
 	//Field
-	private SG90ServoPCA9685Duration servoMotor;
+//	private SG90ServoPCA9685Duration servoMotor;
+	private SG90ServoPCA9685Step servoMotor;
 	private PCA9685 pca9685;
 	private UltrasonicSensor ultrasonicSensor;
 	private int distance;
@@ -20,7 +22,8 @@ public class CoapResource02 extends CoapResource {
 	public CoapResource02() throws Exception {
 		super("resource02");
 		pca9685 = PCA9685.getinstance();
-		servoMotor = new SG90ServoPCA9685Duration(pca9685, PCA9685.PWM_11);
+//		servoMotor = new SG90ServoPCA9685Duration(pca9685, PCA9685.PWM_11);
+		servoMotor = new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_11);
 		ultrasonicSensor = new UltrasonicSensor(RaspiPin.GPIO_28, RaspiPin.GPIO_29);
 
 		Thread thread = new Thread() {

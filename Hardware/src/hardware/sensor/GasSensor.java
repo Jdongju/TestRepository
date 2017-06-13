@@ -37,8 +37,8 @@ public class GasSensor {
 	}
 
 	public static void main(String[] args) throws Exception {
-		PCF8591 pcf8591 = new PCF8591(0x48, PCF8591.AIN0); //i2cAddress는 0x48로 고정. AIN0으로 온도센서와 연결
-		GasSensor test = new GasSensor(pcf8591, RaspiPin.GPIO_00);
+		PCF8591 pcf8591 = new PCF8591(0x48, PCF8591.AIN2); //i2cAddress는 0x48로 고정. AIN0으로 온도센서와 연결
+		GasSensor test = new GasSensor(pcf8591, RaspiPin.GPIO_23);
 		test.setGpioPinListenerDigital(new GpioPinListenerDigital() { //DIgital in의 상태를 조사하여 메소드 동작.
 			@Override
 			public void handleGpioPinDigitalStateChangeEvent(GpioPinDigitalStateChangeEvent event) {
