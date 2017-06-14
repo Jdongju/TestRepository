@@ -26,7 +26,7 @@ public class CoapResource05 extends CoapResource {
 	public CoapResource05() throws Exception {
 		super("resource05");
 
-		pcf8591 = new PCF8591(0x48, PCF8591.AIN0);
+		pcf8591 = new PCF8591(0x48, PCF8591.AIN1);
 		thermistorSensor = new ThermistorSensor(pcf8591);
 
 

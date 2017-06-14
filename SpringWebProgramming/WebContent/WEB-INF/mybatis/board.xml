@@ -14,6 +14,7 @@
 			select
 			board_bno_seq.currval from dual
 		</selectKey>
+		<if test="boriginalfilename!= null">
 		insert into board
 		(bno, btitle, bcontent, bwriter,
 		bdate,bpassword,bhitcount,boriginalfilename, bsavedfilename,
@@ -22,6 +23,15 @@
 		(board_bno_seq.nextval, #{btitle}, #{bcontent},
 		#{bwriter},sysdate,#{bpassword}, 0,
 		#{boriginalfilename},#{bsavedfilename},#{bfilecontent})
+		</if>
+			<if test="boriginalfilename== null">
+		insert into board
+		(bno, btitle, bcontent, bwriter,
+		bdate,bpassword,bhitcount)
+		values
+		(board_bno_seq.nextval, #{btitle}, #{bcontent},
+		#{bwriter},sysdate,#{bpassword}, 0)
+		</if>
 	</insert>
 
 	<resultMap id="selectAllResultMap" type="com.mycompany.myapp.dto.Exam12Board">

@@ -72,7 +72,7 @@ public class CoapResource06 extends CoapResource {
 	//method
 	@Override
 	public void handleGET(CoapExchange exchange) {
-		exchange.respond("Server handle GET() : gasValue" + gasValue);
+		exchange.respond("Server handleGET() : gasValue" + gasValue);
 	}
 
 }

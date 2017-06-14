@@ -120,5 +120,8 @@
 		<a href="aop/exam01" class="btn btn-primary" >로그인 하기</a>
 		<a href="aop/exam02Write" class="btn btn-primary" >로그인 해야 볼 수 있는 내용1</a>
 		<a href="aop/exam02Update" class="btn btn-primary" >로그인 해야 볼 수 있는 내용2</a>
+		
+		<h4>Transaction</h4>
+		<a href="transaction/exam01" class="btn btn-primary"> 트랜잭션 테스트</a>
 	</body>
 </html>
