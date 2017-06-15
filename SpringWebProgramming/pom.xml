@@ -52,7 +52,6 @@
 		</dependency>
 
 		<!--로깅을 위한 SLF4J와 LOG4J 라이브러리 설정 -->
-
 		<!--SLF4J 인터페이스 구현 클래스 라이브러리 -->
 		<dependency>
 			<groupId>org.apache.logging.log4j</groupId>

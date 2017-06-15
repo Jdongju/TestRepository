@@ -52,16 +52,16 @@ public class CarPrepare {
 //		}
 
 //RgbLedDigital
-//while (true) {			
-//			rgbLedDigital.rgb(true,false,false);
-//			Thread.sleep(1000);
-//			rgbLedDigital.rgb(false,true,false);
-//			Thread.sleep(1000);
-//			rgbLedDigital.rgb(false,false,true);
-//			Thread.sleep(1000);
-//		}
+while (true) {			
+			rgbLedDigital.rgb(true,false,false);
+			Thread.sleep(1000);
+			rgbLedDigital.rgb(false,true,false);
+			Thread.sleep(1000);
+			rgbLedDigital.rgb(false,false,true);
+			Thread.sleep(1000);
+		}
 
-//Thermosistor
+//Thermosistor :45도로 나옴
 //		while(true)
 //		{
 //			double value = thermistorSensor.getValue();
@@ -69,7 +69,7 @@ public class CarPrepare {
 //			Thread.sleep(1000);
 //		}
 
-//gas
+//gas :값이 안올라감
 //while (true) {
 //			double value = gasSensor.getValue();
 //			System.out.println(value);
@@ -79,7 +79,7 @@ public class CarPrepare {
 //			Thread.sleep(1000);
 //		}
 		
-//trackingSensor
+//trackingSensor :애매함
 //trackingSensor.setGpioPinListenerDigital(event->{
 //			if(event.getState()==PinState.HIGH){
 //				System.out.println("Black");
@@ -90,7 +90,7 @@ public class CarPrepare {
 //		System.out.println("Ready..");
 //		System.in.read();
 
-//Photoresistor
+//Photoresistor : 안됨
 //while(true)
 //		{
 //			double value = photoresistorSensor.getValue();
@@ -111,23 +111,23 @@ public class CarPrepare {
 //		displayIPaddress(lcd1602);
 //		Thread.sleep(5000);
 
-//UltraSonic
+//UltraSonic : 안됨
 //while (true) {
 //			int distance = ultrasonicSensor.getDistance();
 //			System.out.println("거리(cm): " + distance);
 //			Thread.sleep(1000);
 //		}
 
-PCA9685 pca9685= PCA9685.getinstance();
-		SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_11); //ultra
+//PCA9685 pca9685= PCA9685.getinstance();
+//		SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_11); //ultra
 //		SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_00); //steering
 //SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_14);// 상하운동. 90도일떄 정면을 바라보아야 함
 //SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_15);// 좌우운동. 10도일때 중앙을 향해야 함.
 //		servo.setAngle(10);
-		for (int i = 10; i <= 170; i+=10) {
-			servo.setAngle(i);
-			Thread.sleep(500);
-		}
+//		for (int i = 10; i <= 170; i+=10) {
+//			servo.setAngle(i);
+//			Thread.sleep(500);
+//		}
 //servo.setAngle(160);
 //		servo.setAngle(10);
 //		servo.setAngle(0);
