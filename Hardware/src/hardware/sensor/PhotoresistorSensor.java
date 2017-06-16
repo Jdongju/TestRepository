@@ -14,7 +14,7 @@ public class PhotoresistorSensor {
 		this.pcf8591 = pcf8591;
 	}
 
-	public double getValue() throws IOException, I2CFactory.UnsupportedBusNumberException {
+	public double getValue() throws Exception {
 		int analogVal = pcf8591.analogRead();//0~255
 		
 		return analogVal; //섭씨 리턴

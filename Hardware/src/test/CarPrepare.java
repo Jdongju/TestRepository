@@ -22,14 +22,14 @@ import java.util.Date;
 public class CarPrepare {
 
 	public static void main(String[] args) throws Exception {
-		PCF8591 pcf8591 = new PCF8591(0x48, PCF8591.AIN0); //photoresisotr
-//		PCF8591 pcf8591 = new PCF8591(0x48, PCF8591.AIN1); Thermo
-//PCF8591 pcf8591 = new PCF8591(0x48, PCF8591.AIN2); //가스
+		PCF8591 pcf8591Photoresistor = new PCF8591(0x48, PCF8591.AIN0); //photoresisotr
+		PCF8591 pcf8591Thermistor = new PCF8591(0x48, PCF8591.AIN1); //Thermo
+PCF8591 pcf8591Gas = new PCF8591(0x48, PCF8591.AIN2); //가스
 		LCD1602 lcd1602 = new LCD1602(0x27);
-		PhotoresistorSensor photoresistorSensor = new PhotoresistorSensor(pcf8591);
+		PhotoresistorSensor photoresistorSensor = new PhotoresistorSensor(pcf8591Photoresistor);
 		TrackingSensor trackingSensor = new TrackingSensor(RaspiPin.GPIO_26);
-		GasSensor gasSensor = new GasSensor(pcf8591, RaspiPin.GPIO_23);
-		ThermistorSensor thermistorSensor = new ThermistorSensor(pcf8591);
+		GasSensor gasSensor = new GasSensor(pcf8591Gas, RaspiPin.GPIO_23);
+		ThermistorSensor thermistorSensor = new ThermistorSensor(pcf8591Thermistor);
 		RgbLedDigital rgbLedDigital = new RgbLedDigital(RaspiPin.GPIO_04, RaspiPin.GPIO_05, RaspiPin.GPIO_06);
 		ActiveBuzzer activeBuzzer = new ActiveBuzzer(RaspiPin.GPIO_24);
 		Laser laser = new Laser(RaspiPin.GPIO_25);
@@ -51,17 +51,17 @@ public class CarPrepare {
 //			Thread.sleep(200);
 //		}
 
-//RgbLedDigital
-while (true) {			
-			rgbLedDigital.rgb(true,false,false);
-			Thread.sleep(1000);
-			rgbLedDigital.rgb(false,true,false);
-			Thread.sleep(1000);
-			rgbLedDigital.rgb(false,false,true);
-			Thread.sleep(1000);
-		}
+////RgbLedDigital
+//while (true) {			
+//			rgbLedDigital.rgb(true,false,false);
+//			Thread.sleep(1000);
+//			rgbLedDigital.rgb(false,true,false);
+//			Thread.sleep(1000);
+//			rgbLedDigital.rgb(false,false,true);
+//			Thread.sleep(1000);
+//		}
 
-//Thermosistor :45도로 나옴
+//Thermosistor 
 //		while(true)
 //		{
 //			double value = thermistorSensor.getValue();
@@ -69,7 +69,7 @@ while (true) {
 //			Thread.sleep(1000);
 //		}
 
-//gas :값이 안올라감
+//gas
 //while (true) {
 //			double value = gasSensor.getValue();
 //			System.out.println(value);
@@ -79,7 +79,7 @@ while (true) {
 //			Thread.sleep(1000);
 //		}
 		
-//trackingSensor :애매함
+//trackingSensor
 //trackingSensor.setGpioPinListenerDigital(event->{
 //			if(event.getState()==PinState.HIGH){
 //				System.out.println("Black");
@@ -90,7 +90,7 @@ while (true) {
 //		System.out.println("Ready..");
 //		System.in.read();
 
-//Photoresistor : 안됨
+//Photoresistor
 //while(true)
 //		{
 //			double value = photoresistorSensor.getValue();
@@ -118,14 +118,26 @@ while (true) {
 //			Thread.sleep(1000);
 //		}
 
-//PCA9685 pca9685= PCA9685.getinstance();
-//		SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_11); //ultra
-//		SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_00); //steering
-//SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_14);// 상하운동. 90도일떄 정면을 바라보아야 함
-//SG90ServoPCA9685Step servo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_15);// 좌우운동. 10도일때 중앙을 향해야 함.
-//		servo.setAngle(10);
+PCA9685 pca9685= PCA9685.getinstance();
+		SG90ServoPCA9685Step ultraServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_11); //ultra
+		SG90ServoPCA9685Step steeringServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_00); //steering
+SG90ServoPCA9685Step leftRightServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_14);// 좌우운동. 10도일때 중앙을 향해야 함.
+SG90ServoPCA9685Step upDownServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_15);// 상하운동. 90도일떄 정면을 바라보아야 함
+		
 //		for (int i = 10; i <= 170; i+=10) {
-//			servo.setAngle(i);
+//			ultraServo.setAngle(i);
+//			Thread.sleep(500);
+//		}
+//		for (int i = 10; i <= 170; i+=10) {
+//			steeringServo.setAngle(i);
+//			Thread.sleep(500);
+//		}
+//		for (int i = 10; i <= 170; i+=10) {
+//			upDownServo.setAngle(i);
+//			Thread.sleep(500);
+//		}
+//		for (int i = 10; i <= 170; i+=10) {
+//			leftRightServo.setAngle(i);
 //			Thread.sleep(500);
 //		}
 //servo.setAngle(160);
@@ -135,5 +147,10 @@ while (true) {
 //		servo.setAngle(180);
 		//servo.setAngle(270);
 		//servo.setAngle(360);
+		
+//		ultraServo.setAngle(90);
+//		steeringServo.setAngle(90);
+		upDownServo.setAngle(0);
+//		leftRightServo.setAngle(10);
 	}
 }

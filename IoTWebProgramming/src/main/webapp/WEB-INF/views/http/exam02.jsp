@@ -3,8 +3,11 @@
 <%@taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>
 
 { 
-	"thermistor":"${thermistor}", 
-	"photoresistor":"${photoresistor}" 
+	"title":"${title}",
+	"content":"${content}",
+	"originalfilename":"${originalfilename}",
+	"filecontenttype":"${filecontenttype}",
+	"savedfilename":"${savedfilename}"
 }
 
 

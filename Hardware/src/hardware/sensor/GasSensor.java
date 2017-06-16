@@ -30,7 +30,7 @@ public class GasSensor {
 		gpioPinDigitalInput.addListener(gpioPinListenerDigital);
 	}
 
-	public double getValue() throws IOException, I2CFactory.UnsupportedBusNumberException {
+	public double getValue() throws Exception {
 		int analogVal = pcf8591.analogRead();//0~255 //value는 아날로그 값을 읽는다.
 
 		return analogVal; //섭씨 리턴

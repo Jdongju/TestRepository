@@ -14,7 +14,7 @@ public class ThermistorSensor {
 		this.pcf8591 = pcf8591;
 	}
 
-	public double getValue() throws IOException, I2CFactory.UnsupportedBusNumberException {
+	public double getValue() throws Exception {
 		int analogVal = pcf8591.analogRead();//0~255
 		double value = 5 * (double) analogVal / 255;
 		value= 10000*value/(5-value);
