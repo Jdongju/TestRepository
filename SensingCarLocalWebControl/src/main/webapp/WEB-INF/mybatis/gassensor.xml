@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper 
+	PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" 
+	"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="gassensor">
+	<select id="selectByAll" resultType="com.mycompany.myapp.dto.GasSensor">
+		select gno, gvalue, gdate from gassensor
+	</select>
+	
+	<!-- useGeneratedKeys="true" : 자동키생성을 사용하겠다. -->
+<!-- keyColumn="gno"에 keyProperty="gno"의 값을 넣겠다. -->
+	<insert id="insert" parameterType="com.mycompany.myapp.dto.GasSensor" useGeneratedKeys="true"
+		keyColumn="gno" keyProperty="gno">
+		insert into gassensor(gvalue,gdate) values (#{gvalue}, now());
+
+
+	</insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
