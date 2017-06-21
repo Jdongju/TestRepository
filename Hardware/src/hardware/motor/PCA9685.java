@@ -15,7 +15,7 @@ public class PCA9685 {
 	private static PCA9685 singleton; //PCA9685는 하나만 존재해야한다.
 	//그래서 다음과 같이 singleton 형태로 작성한다.
 
-	public static PCA9685 getinstance() throws Exception {
+	public static PCA9685 getInstance() throws Exception {
 		if (singleton == null) {
 			singleton = new PCA9685(); //null일 경우에만 객체 생성해서 singleton에 대입.
 		}
@@ -109,7 +109,7 @@ public class PCA9685 {
 
 	//Method
 	public static void main(String[] args) throws Exception {
-		PCA9685 pca9685 = PCA9685.getinstance();//싱글톤 형태로 객체가 하나만 존재하도록 한다.
+		PCA9685 pca9685 = PCA9685.getInstance();//싱글톤 형태로 객체가 하나만 존재하도록 한다.
 
 		while (true) {
 			pca9685.setStep(PWM_00, 164);//164단계를 주면 0도

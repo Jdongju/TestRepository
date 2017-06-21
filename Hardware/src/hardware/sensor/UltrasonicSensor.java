@@ -28,6 +28,7 @@ public class UltrasonicSensor {
 		echoPin.setShutdownOptions(true, PinState.LOW);
 	}
 
+	//한번에 하나의 스레드만 접근 가능하다.
 	public int getDistance() {
 		//초음파 발신 시간 변수와 수신 시간 변수 선언
 		double start = 0;

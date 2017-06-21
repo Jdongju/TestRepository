@@ -21,7 +21,7 @@ public class Laser {
 	public void shoot(){
 		lasPin.low();
 	}
-		public void shoot1(){
+		public void off(){
 		lasPin.high();
 	}
 
@@ -32,7 +32,7 @@ public class Laser {
 		while (true) {			
 			test.shoot();
 			Thread.sleep(1000);
-			test.shoot1();
+			test.off();
 			Thread.sleep(1000);
 		}
 

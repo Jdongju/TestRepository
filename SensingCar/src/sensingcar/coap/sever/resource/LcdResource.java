@@ -1,0 +1,71 @@
+package sensingcar.coap.sever.resource;
+
+import hardware.lcd.LCD1602;
+import org.eclipse.californium.core.CoapResource;
+import org.eclipse.californium.core.server.resources.CoapExchange;
+import org.json.JSONObject;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+public class LcdResource extends CoapResource {
+
+	//Field
+	private static final Logger LOGGER = LoggerFactory.getLogger(LcdResource.class);
+	private LCD1602 lcd;
+	private String currLine0;
+	private String currLine1;
+
+	//Constructor
+	public LcdResource() throws Exception {
+		super("lcd");
+		lcd=new LCD1602(0x27);
+		setText("RPI-14-2", "192.168.3.48");
+	}
+
+	//Method
+	private void setText(String line0, String line1) {
+		lcd.clear();
+		
+		lcd.write(0, 0, line0);
+		lcd.write(1, 0, line1);
+		currLine0 = line0;
+		currLine1 = line1;
+	}
+
+	@Override
+	public void handleGET(CoapExchange exchange) {
+
+	}
+
+	@Override
+	public void handlePOST(CoapExchange exchange) {
+		//{ "command":"change", "line0":"100", "line1":"100" }
+		//{ "command":"status" }
+		try {
+			String requestJson = exchange.getRequestText();
+			JSONObject requestJsonObject = new JSONObject(requestJson);
+			String command = requestJsonObject.getString("command");
+			if (command.equals("change")) {
+				String line0 = requestJsonObject.getString("line0");
+				String line1 = requestJsonObject.getString("line1");
+
+				setText(line0, line1);
+			} else if (command.equals("status")) {
+			}
+
+			JSONObject responseJsonObject = new JSONObject();
+			responseJsonObject.put("result", "success");
+			responseJsonObject.put("line0", currLine0);
+			responseJsonObject.put("line1", currLine1);
+			String responseJson = responseJsonObject.toString();
+			exchange.respond(responseJson);
+		} catch (Exception e) {
+			LOGGER.info(e.toString());
+			JSONObject responseJsonObject = new JSONObject();
+			responseJsonObject.put("result", "fail");
+			String responseJson = responseJsonObject.toString();
+			exchange.respond(responseJson);
+		}
+
+	}
+}

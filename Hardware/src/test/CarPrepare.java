@@ -118,7 +118,7 @@ PCF8591 pcf8591Gas = new PCF8591(0x48, PCF8591.AIN2); //가스
 //			Thread.sleep(1000);
 //		}
 
-PCA9685 pca9685= PCA9685.getinstance();
+PCA9685 pca9685= PCA9685.getInstance();
 		SG90ServoPCA9685Step ultraServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_11); //ultra
 		SG90ServoPCA9685Step steeringServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_00); //steering
 SG90ServoPCA9685Step leftRightServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_14);// 좌우운동. 10도일때 중앙을 향해야 함.
@@ -150,7 +150,7 @@ SG90ServoPCA9685Step upDownServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_
 		
 //		ultraServo.setAngle(90);
 //		steeringServo.setAngle(90);
-		upDownServo.setAngle(0);
+//		upDownServo.setAngle(0);
 //		leftRightServo.setAngle(10);
 	}
 }

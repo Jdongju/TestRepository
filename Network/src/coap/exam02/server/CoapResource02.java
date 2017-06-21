@@ -21,7 +21,7 @@ public class CoapResource02 extends CoapResource {
 	//Constructor
 	public CoapResource02() throws Exception {
 		super("resource02");
-		pca9685 = PCA9685.getinstance();
+		pca9685 = PCA9685.getInstance();
 //		servoMotor = new SG90ServoPCA9685Duration(pca9685, PCA9685.PWM_11);
 		servoMotor = new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_11);
 		ultrasonicSensor = new UltrasonicSensor(RaspiPin.GPIO_28, RaspiPin.GPIO_29);

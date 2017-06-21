@@ -52,7 +52,7 @@ public class DCMotor {
 	}
 
 	public static void main(String[] args) throws Exception {
-		PCA9685 pca9685 = PCA9685.getinstance();
+		PCA9685 pca9685 = PCA9685.getInstance();
 		
 		DCMotor motorA= new DCMotor(RaspiPin.GPIO_00, RaspiPin.GPIO_01, pca9685, PCA9685.PWM_05);
 		DCMotor motorB= new DCMotor(RaspiPin.GPIO_02, RaspiPin.GPIO_03, pca9685, PCA9685.PWM_04);

@@ -30,6 +30,8 @@ public class CoapResource01 extends CoapResource{
 		} catch (IOException ex) {
 		} catch (I2CFactory.UnsupportedBusNumberException ex) {
 			Logger.getLogger(CoapResource01.class.getName()).log(Level.SEVERE, null, ex);
+		} catch (Exception ex) {
+			Logger.getLogger(CoapResource01.class.getName()).log(Level.SEVERE, null, ex);
 		}
 		
 		
