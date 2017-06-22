@@ -74,8 +74,8 @@ public class CameraResource extends CoapResource {
 			JSONObject requestJsonObject = new JSONObject(requestJson);
 			String command = requestJsonObject.getString("command");
 			if (command.equals("change")) {
-				int leftRight=Integer.parseInt(requestJsonObject.getString("leftRight"));
-				int upDown=Integer.parseInt(requestJsonObject.getString("upDown"));
+				int leftRight=Integer.parseInt(requestJsonObject.getString("leftright"));
+				int upDown=Integer.parseInt(requestJsonObject.getString("updown"));
 				turnLeftRight(leftRight);
 				turnUpDown(upDown);
 			} else if (command.equals("status")) {
@@ -83,8 +83,8 @@ public class CameraResource extends CoapResource {
 
 			JSONObject responseJsonObject = new JSONObject();
 			responseJsonObject.put("result", "success");
-			responseJsonObject.put("leftRight", String.valueOf(currLeftRight));
-			responseJsonObject.put("upDown", String.valueOf(currUpDown));
+			responseJsonObject.put("leftright", String.valueOf(currLeftRight));
+			responseJsonObject.put("updown", String.valueOf(currUpDown));
 			String responseJson = responseJsonObject.toString();
 			exchange.respond(responseJson);
 		} catch (Exception e) {

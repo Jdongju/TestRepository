@@ -56,9 +56,9 @@ public class RGBLedResource extends CoapResource {
 
 			JSONObject responseJsonObject = new JSONObject();
 			responseJsonObject.put("result", "success");
-			responseJsonObject.put("red", currRed);
-			responseJsonObject.put("green", currGreen);
-			responseJsonObject.put("blue", currBlue);
+			responseJsonObject.put("red", String.valueOf(currRed));
+			responseJsonObject.put("green", String.valueOf(currGreen));
+			responseJsonObject.put("blue", String.valueOf(currBlue));
 			String responseJson = responseJsonObject.toString();
 			exchange.respond(responseJson);
 		} catch (Exception e) {
