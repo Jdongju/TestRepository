@@ -96,7 +96,7 @@ public class UltrasonicSensorResource extends CoapResource {
 			JSONObject requestJsonObject = new JSONObject(requestJson);
 			String command = requestJsonObject.getString("command");
 			if (command.equals("change")) {
-				int angle = Integer.valueOf(requestJsonObject.getString("angle"));
+				int angle = Integer.parseInt(requestJsonObject.getString("angle"));
 				setAngle(angle);
 				try {
 					Thread.sleep(1000);

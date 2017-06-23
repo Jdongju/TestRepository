@@ -1,5 +1,5 @@
 function camera(command, leftright, updown) {
-	var json = {"command":"change", "leftright":leftright, "updown":updown};
+	var json = {"command":"command", "leftright":leftright, "updown":updown};
 
 	$.ajax({
 		url:"http://" + location.host + "/SensingCarRemoteWebControl/camera",
