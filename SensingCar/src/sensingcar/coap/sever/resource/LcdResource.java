@@ -87,7 +87,15 @@ public class LcdResource extends CoapResource {
 						wlan0 = ia.getHostAddress();
 					}
 				}
-			}
+			}else if(displayName.equals("wlan1")){
+                                                         Enumeration<InetAddress> iaEnum = ni.getInetAddresses();
+				while (iaEnum.hasMoreElements()) {
+					InetAddress ia = iaEnum.nextElement();
+					if (ia instanceof Inet4Address) {
+						wlan0 = ia.getHostAddress();
+					}
+				}       
+                                                }
 		}
 		return wlan0;
 	}

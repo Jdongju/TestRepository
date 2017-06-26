@@ -4,7 +4,7 @@ function lcd(command) {
 	var josn={"command":command,"line0":line0,"line1":line1};
 
 	$.ajax({
-		url:"http://" + location.host + "/SensingCarRemoteWebControl/ultrasonicsensor",
+		url:"http://" + location.host + "/SensingCarRemoteWebControl/lcd",
 		data: json,
 		method: "post",
 		success: function(data) {

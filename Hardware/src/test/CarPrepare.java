@@ -132,14 +132,14 @@ SG90ServoPCA9685Step upDownServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_
 //			steeringServo.setAngle(i);
 //			Thread.sleep(500);
 //		}
-//		for (int i = 10; i <= 170; i+=10) {
-//			upDownServo.setAngle(i);
-//			Thread.sleep(500);
-//		}
-//		for (int i = 10; i <= 170; i+=10) {
-//			leftRightServo.setAngle(i);
-//			Thread.sleep(500);
-//		}
+		for (int i = 10; i <= 170; i+=10) {
+			upDownServo.setAngle(i);
+			Thread.sleep(500);
+		}
+		for (int i = 10; i <= 170; i+=10) {
+			leftRightServo.setAngle(i);
+			Thread.sleep(500);
+		}
 //servo.setAngle(160);
 //		servo.setAngle(10);
 //		servo.setAngle(0);
@@ -148,9 +148,9 @@ SG90ServoPCA9685Step upDownServo= new SG90ServoPCA9685Step(pca9685, PCA9685.PWM_
 		//servo.setAngle(270);
 		//servo.setAngle(360);
 		
-//		ultraServo.setAngle(90);
-//		steeringServo.setAngle(90);
-//		upDownServo.setAngle(0);
-//		leftRightServo.setAngle(10);
+		ultraServo.setAngle(90);
+		steeringServo.setAngle(90);
+		upDownServo.setAngle(0);
+		leftRightServo.setAngle(10);
 	}
 }
