@@ -61,7 +61,7 @@ public class BuzzerResource extends CoapResource {
 			String command = requestJsonObject.getString("command");
 			if (command.equals("change")) {
 				String status = requestJsonObject.getString("status");
-//				if(status.equals("on")) on();
+				if(status.equals("on")) on();
 				if(status.equals("off")) off();
 			} else if (command.equals("status")) {
 			}

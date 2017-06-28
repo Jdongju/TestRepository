@@ -1,0 +1,42 @@
+/*
+ * Copyright (C) 2014 TESIS DYNAware GmbH.
+ * All rights reserved. Use is subject to license terms.
+ * 
+ * This file is licensed under the Eclipse Public License v1.0, which accompanies this
+ * distribution and is available at http://www.eclipse.org/legal/epl-v10.html.
+ */
+
+package de.tesis.dynaware.javafx.fancychart
+
+import javafx.scene.control.TableView
+import de.tesis.dynaware.javafx.fancychart.TabbedTablesController
+import de.tesis.dynaware.javafx.fancychart.TabTable
+import javafx.scene.control.TabPane
+import javafx.scene.control.Tab
+import javafx.scene.layout.StackPane
+
+component TabbedTables controlledby TabbedTablesController {
+	StackPane id tabPaneContainer {
+		children : [
+			TabPane id tableTabPane {
+				tabs : [
+					Tab {
+						text : "Data Set 1",
+						closable : false,
+						content : include TabTable as table0
+					},
+					Tab {
+						text : "Data Set 2",
+						closable : false,
+						content : include TabTable as table1
+					},
+					Tab {
+						text : "Data Set 3",
+						closable : false,
+						content : include TabTable as table2
+					}
+				]
+			}
+		]
+	}
+}

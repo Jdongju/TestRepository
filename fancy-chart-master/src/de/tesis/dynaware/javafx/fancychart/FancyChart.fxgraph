@@ -1,0 +1,57 @@
+/*
+ * Copyright (C) 2014 TESIS DYNAware GmbH.
+ * All rights reserved. Use is subject to license terms.
+ * 
+ * This file is licensed under the Eclipse Public License v1.0, which accompanies this
+ * distribution and is available at http://www.eclipse.org/legal/epl-v10.html.
+ */
+
+package de.tesis.dynaware.javafx.fancychart
+
+import javafx.scene.layout.StackPane
+import javafx.scene.chart.LineChart
+import javafx.scene.chart.LineChart
+import javafx.scene.layout.HBox
+import javafx.scene.layout.VBox
+import javafx.scene.control.TabPane
+import javafx.scene.control.Tab
+import javafx.scene.control.TableView
+import javafx.scene.chart.XYChart
+import javafx.scene.control.ColorPicker
+import de.tesis.dynaware.javafx.fancychart.FancyChartController
+import de.tesis.dynaware.javafx.fancychart.TabbedTables
+import de.tesis.dynaware.javafx.fancychart.DataItem
+
+component Characteristic controlledby FancyChartController {
+	StackPane id rootPane {
+		children : [
+			HBox id chartPage {
+				children : [
+					VBox id chartBox {
+						call HBox#hgrow : "ALWAYS",
+						children : [
+							HBox id colorPickerBox {
+								children : [
+									ColorPicker id colorPicker0 {
+										minWidth : 55,
+										onAction : controllermethod setColor
+									},
+									ColorPicker id colorPicker1 {
+										minWidth : 55,
+										onAction : controllermethod setColor
+									},
+									ColorPicker id colorPicker2 {
+										minWidth : 55,
+										onAction : controllermethod setColor
+									}
+								]
+							}
+							
+							]
+					},
+				 	include TabbedTables as tabPaneContainer
+				 ]
+			}
+		]
+	}
+}
