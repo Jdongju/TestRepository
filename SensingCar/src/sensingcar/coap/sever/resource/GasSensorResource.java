@@ -71,7 +71,7 @@ public class GasSensorResource extends CoapResource {
 	@Override
 	public void handleGET(CoapExchange exchange) {
 		JSONObject responseJsonObject = new JSONObject();
-		responseJsonObject.put("gassensor", String.valueOf(currValue));
+		responseJsonObject.put("gas", String.valueOf(currValue));
 		String responseJson = responseJsonObject.toString();
 		exchange.respond(responseJson);
 	}
@@ -88,7 +88,7 @@ public class GasSensorResource extends CoapResource {
 
 			JSONObject responseJsonObject = new JSONObject();
 			responseJsonObject.put("result", "success");
-			responseJsonObject.put("gassensor", String.valueOf(currValue));
+			responseJsonObject.put("gas", String.valueOf(currValue));
 			String responseJson = responseJsonObject.toString();
 			exchange.respond(responseJson);
 		} catch (Exception e) {
