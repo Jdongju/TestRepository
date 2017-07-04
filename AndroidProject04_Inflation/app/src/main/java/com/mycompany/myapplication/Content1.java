@@ -27,7 +27,7 @@ public class Content1 extends LinearLayout{
 //        항목이 여러개이기 때문에 읽은 것을 부모에 저장하지 않고 addVIew로 넣는다.
         View view=inflater.inflate(R.layout.content1_item,null);
 
-
+    //바인딩
         ImageView photo= (ImageView) view.findViewById(R.id.photo);
         photo.setImageResource(item1.getPhoto());
         TextView title= (TextView) view.findViewById(R.id.title);

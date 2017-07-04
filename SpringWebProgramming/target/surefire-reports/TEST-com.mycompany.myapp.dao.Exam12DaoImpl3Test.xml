@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="1.968" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="2.533" tests="4" errors="4" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.8.0_121\jre\bin"/>
@@ -26,7 +26,7 @@
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="user.variant" value=""/>
     <property name="os.name" value="Windows 7"/>
-    <property name="classworlds.conf" value="D:\IoTCourse\EclipseWorkspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf856786661726420255.tmp"/>
+    <property name="classworlds.conf" value="D:\IoTCourse\EclipseWorkspace\.metadata\.plugins\org.eclipse.m2e.launching\launches\m2conf3398332488470867999.tmp"/>
     <property name="sun.jnu.encoding" value="MS949"/>
     <property name="java.library.path" value="C:\Program Files\Java\jdk1.8.0_121\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:/Program Files/Java/jre1.8.0_121/bin/server;C:/Program Files/Java/jre1.8.0_121/bin;C:/Program Files/Java/jre1.8.0_121/lib/amd64;C:\Oracle\product\11.2.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Java\jdk1.8.0_121\bin;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Users\Administrator\AppData\Local\atom\bin;;D:\설치파일\eclipse-jee-neon-3-win32-x86_64\eclipse;;."/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
@@ -39,7 +39,7 @@
     <property name="java.specification.version" value="1.8"/>
     <property name="file.encoding" value="UTF-8"/>
     <property name="user.name" value="Administrator"/>
-    <property name="java.class.path" value="/D:/설치파일/eclipse-jee-neon-3-win32-x86_64/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.7.0.20160603-1931/jars/plexus-classworlds-2.5.2.jar"/>
+    <property name="java.class.path" value="/D:/설치파일/eclipse-jee-neon-3-win32-x86_64/eclipse/plugins/org.eclipse.m2e.maven.runtime_1.7.1.20161104-1803/jars/plexus-classworlds-2.5.2.jar"/>
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.home" value="C:\Program Files\Java\jdk1.8.0_121\jre"/>
@@ -60,8 +60,1208 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="updateTest" classname="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="0.306"/>
-  <testcase name="insertTest" classname="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="0.002"/>
-  <testcase name="insertWithAttachTest" classname="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="0.002"/>
-  <testcase name="deleteTest" classname="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="0.004"/>
+  <testcase name="updateTest" classname="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="0.005">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+</error>
+    <system-out><![CDATA[Exam10DIController - setExam10Service2 실행
+]]></system-out>
+    <system-err><![CDATA[6월 30, 2017 2:20:33 오후 org.springframework.test.context.web.WebTestContextBootstrapper getDefaultTestExecutionListenerClassNames
+정보: Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener]
+6월 30, 2017 2:20:33 오후 org.springframework.test.context.web.WebTestContextBootstrapper getTestExecutionListeners
+정보: Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@53b32d7, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5442a311, org.springframework.test.context.support.DependencyInjectionTestExecutionListener@548e7350, org.springframework.test.context.support.DirtiesContextTestExecutionListener@1a968a59, org.springframework.test.context.transaction.TransactionalTestExecutionListener@4667ae56, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@77cd7a0]
+6월 30, 2017 2:20:33 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from URL [file:WebContent/WEB-INF/spring/applicationContext.xml]
+6월 30, 2017 2:20:34 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from URL [file:WebContent/WEB-INF/spring/dispatcher-servlet.xml]
+6월 30, 2017 2:20:34 오후 org.springframework.web.context.support.GenericWebApplicationContext prepareRefresh
+정보: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@4fe3c938: startup date [Fri Jun 30 14:20:34 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:34 오후 com.mchange.v2.log.MLog <clinit>
+정보: MLog clients using java 1.4+ standard logging.
+6월 30, 2017 2:20:34 오후 com.mchange.v2.c3p0.C3P0Registry banner
+정보: Initializing c3p0-0.9.1.2 [built 21-May-2007 15:04:56; debug? true; trace: 10]
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/]}" onto public java.lang.String com.mycompany.myapp.controller.Exam01HomeController.home()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/html/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam02HtmlController.html()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam04()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam05()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam06()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam07]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam07()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam08]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam08()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam09]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam09()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam10]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam10()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam11]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam11()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04_html_fragment]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04_html_fragment()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04_json]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04_json()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam04(javax.servlet.http.HttpServletRequest)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam05(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam02(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam03(java.lang.String,int,java.lang.String[],java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam01POST()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam01Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.join(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String[],java.lang.String)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.joinForm()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.join2(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String[],java.lang.String,org.springframework.web.multipart.MultipartFile)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.joinForm2()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/file/exam03]}" onto public void com.mycompany.myapp.controller.Exam09FormController.download(javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/di/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam10DIController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/di/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam10DIController.exam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/redirect/write]}" onto public java.lang.String com.mycompany.myapp.controller.Exam11RedirectController.write()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/redirect/list]}" onto public java.lang.String com.mycompany.myapp.controller.Exam11RedirectController.list()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05CheckBpassword]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05CheckBpassword(int,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06CheckMpassword]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06CheckMpassword(java.lang.String,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05UpdatePost(com.mycompany.myapp.dto.Exam12Board)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Delete]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05Delete(int)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Detail]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06Detail(java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06UpdateGet(java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06UpdatePost(com.mycompany.myapp.dto.Exam12Member)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Delete]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06Delete(java.lang.String)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05UpdateGet(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Detail]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05Detail(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam02Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam02Post(com.mycompany.myapp.dto.Exam12Board) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam03],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam03Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam03],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam03Post(com.mycompany.myapp.dto.Exam12Member) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam06(org.springframework.web.bind.support.SessionStatus)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam01(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam02(java.lang.String,java.lang.String,org.springframework.ui.Model) throws java.io.UnsupportedEncodingException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam03(javax.servlet.http.HttpServletResponse)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam05(java.lang.String,java.lang.String,com.mycompany.myapp.dto.Exam13Member)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam02Update]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam02Update()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam02Write]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam02Write(javax.servlet.http.HttpSession)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam01(javax.servlet.http.HttpSession)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/transaction/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam15TransactionController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/transaction/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam15TransactionController.exam01(java.lang.String,java.lang.String,int)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/chatClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.chatClient()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/echoClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.echoClient()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/measureClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.measureClient()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05CheckBpassword]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05CheckBpassword(int,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05UpdatePost(com.mycompany.myapp.dto.Exam12Board)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Delete]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05Delete(int)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05UpdateGet(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Detail]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05Detail(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/file/exam03]}" onto public void com.mycompany.myapp.controller.HomeworkController.download(javax.servlet.http.HttpServletResponse,java.lang.String,com.mycompany.myapp.dto.Exam12Board) throws java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam02Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam02Post(com.mycompany.myapp.dto.Exam12Board) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam03],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam03Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam03],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam03Post(com.mycompany.myapp.dto.Exam12Member) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4fe3c938: startup date [Fri Jun 30 14:20:34 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@4fe3c938: startup date [Fri Jun 30 14:20:34 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver initExceptionHandlerAdviceCache
+정보: Detected @ExceptionHandler methods in noAccountExceptionHandler
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping registerHandler
+정보: Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+6월 30, 2017 2:20:35 오후 org.springframework.web.context.support.GenericWebApplicationContext refresh
+경고: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+6월 30, 2017 2:20:35 오후 org.springframework.test.context.TestContextManager prepareTestInstance
+심각: Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@53b32d7] to prepare test instance [com.mycompany.myapp.dao.Exam12DaoImpl3Test@2228db21]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedMap(BeanDefinitionValueResolver.java:407)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1531)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:134)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:145)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 46 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 58 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1147)
+	... 66 more
+Caused by: java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.initRequestUpgradeStrategy(AbstractHandshakeHandler.java:143)
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.<init>(AbstractHandshakeHandler.java:109)
+	at org.springframework.web.socket.server.support.DefaultHandshakeHandler.<init>(DefaultHandshakeHandler.java:35)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142)
+	... 68 more
+
+]]></system-err>
+  </testcase>
+  <testcase name="insertTest" classname="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="0.001">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+</error>
+    <system-out><![CDATA[Exam10DIController - setExam10Service2 실행
+]]></system-out>
+    <system-err><![CDATA[6월 30, 2017 2:20:35 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from URL [file:WebContent/WEB-INF/spring/applicationContext.xml]
+6월 30, 2017 2:20:35 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from URL [file:WebContent/WEB-INF/spring/dispatcher-servlet.xml]
+6월 30, 2017 2:20:35 오후 org.springframework.web.context.support.GenericWebApplicationContext prepareRefresh
+정보: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@6b04acb2: startup date [Fri Jun 30 14:20:35 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/]}" onto public java.lang.String com.mycompany.myapp.controller.Exam01HomeController.home()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/html/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam02HtmlController.html()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam04()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam05()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam06()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam07]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam07()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam08]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam08()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam09]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam09()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam10]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam10()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam11]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam11()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04_html_fragment]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04_html_fragment()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04_json]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04_json()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam04(javax.servlet.http.HttpServletRequest)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam05(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam02(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam03(java.lang.String,int,java.lang.String[],java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam01POST()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam01Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.join(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String[],java.lang.String)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.joinForm()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.join2(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String[],java.lang.String,org.springframework.web.multipart.MultipartFile)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.joinForm2()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/file/exam03]}" onto public void com.mycompany.myapp.controller.Exam09FormController.download(javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/di/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam10DIController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/di/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam10DIController.exam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/redirect/write]}" onto public java.lang.String com.mycompany.myapp.controller.Exam11RedirectController.write()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/redirect/list]}" onto public java.lang.String com.mycompany.myapp.controller.Exam11RedirectController.list()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05CheckBpassword]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05CheckBpassword(int,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06CheckMpassword]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06CheckMpassword(java.lang.String,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05UpdatePost(com.mycompany.myapp.dto.Exam12Board)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Delete]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05Delete(int)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Detail]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06Detail(java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06UpdateGet(java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06UpdatePost(com.mycompany.myapp.dto.Exam12Member)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Delete]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06Delete(java.lang.String)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05UpdateGet(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Detail]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05Detail(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam02Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam02Post(com.mycompany.myapp.dto.Exam12Board) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam03],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam03Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam03],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam03Post(com.mycompany.myapp.dto.Exam12Member) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam06(org.springframework.web.bind.support.SessionStatus)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam01(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam02(java.lang.String,java.lang.String,org.springframework.ui.Model) throws java.io.UnsupportedEncodingException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam03(javax.servlet.http.HttpServletResponse)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam05(java.lang.String,java.lang.String,com.mycompany.myapp.dto.Exam13Member)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam02Update]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam02Update()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam02Write]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam02Write(javax.servlet.http.HttpSession)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam01(javax.servlet.http.HttpSession)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/transaction/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam15TransactionController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/transaction/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam15TransactionController.exam01(java.lang.String,java.lang.String,int)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/chatClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.chatClient()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/echoClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.echoClient()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/measureClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.measureClient()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05CheckBpassword]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05CheckBpassword(int,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05UpdatePost(com.mycompany.myapp.dto.Exam12Board)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Delete]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05Delete(int)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05UpdateGet(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Detail]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05Detail(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/file/exam03]}" onto public void com.mycompany.myapp.controller.HomeworkController.download(javax.servlet.http.HttpServletResponse,java.lang.String,com.mycompany.myapp.dto.Exam12Board) throws java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam02Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam02Post(com.mycompany.myapp.dto.Exam12Board) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam03],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam03Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam03],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam03Post(com.mycompany.myapp.dto.Exam12Member) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6b04acb2: startup date [Fri Jun 30 14:20:35 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@6b04acb2: startup date [Fri Jun 30 14:20:35 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver initExceptionHandlerAdviceCache
+정보: Detected @ExceptionHandler methods in noAccountExceptionHandler
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping registerHandler
+정보: Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+6월 30, 2017 2:20:35 오후 org.springframework.web.context.support.GenericWebApplicationContext refresh
+경고: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+6월 30, 2017 2:20:35 오후 org.springframework.test.context.TestContextManager prepareTestInstance
+심각: Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@53b32d7] to prepare test instance [com.mycompany.myapp.dao.Exam12DaoImpl3Test@6edc4161]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedMap(BeanDefinitionValueResolver.java:407)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1531)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:134)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:145)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 46 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 58 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1147)
+	... 66 more
+Caused by: java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.initRequestUpgradeStrategy(AbstractHandshakeHandler.java:143)
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.<init>(AbstractHandshakeHandler.java:109)
+	at org.springframework.web.socket.server.support.DefaultHandshakeHandler.<init>(DefaultHandshakeHandler.java:35)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142)
+	... 68 more
+
+]]></system-err>
+  </testcase>
+  <testcase name="insertWithAttachTest" classname="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="0">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+</error>
+    <system-out><![CDATA[Exam10DIController - setExam10Service2 실행
+]]></system-out>
+    <system-err><![CDATA[6월 30, 2017 2:20:35 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from URL [file:WebContent/WEB-INF/spring/applicationContext.xml]
+6월 30, 2017 2:20:35 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from URL [file:WebContent/WEB-INF/spring/dispatcher-servlet.xml]
+6월 30, 2017 2:20:35 오후 org.springframework.web.context.support.GenericWebApplicationContext prepareRefresh
+정보: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@f973499: startup date [Fri Jun 30 14:20:35 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/]}" onto public java.lang.String com.mycompany.myapp.controller.Exam01HomeController.home()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/html/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam02HtmlController.html()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam04()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam05()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam06()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam07]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam07()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam08]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam08()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam09]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam09()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam10]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam10()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam11]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam11()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04_html_fragment]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04_html_fragment()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04_json]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04_json()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam03()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam04(javax.servlet.http.HttpServletRequest)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam05(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam02(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam03(java.lang.String,int,java.lang.String[],java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam01POST()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam01Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.join(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String[],java.lang.String)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.joinForm()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.join2(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String[],java.lang.String,org.springframework.web.multipart.MultipartFile)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.joinForm2()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/file/exam03]}" onto public void com.mycompany.myapp.controller.Exam09FormController.download(javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/di/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam10DIController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/di/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam10DIController.exam02()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/redirect/write]}" onto public java.lang.String com.mycompany.myapp.controller.Exam11RedirectController.write()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/redirect/list]}" onto public java.lang.String com.mycompany.myapp.controller.Exam11RedirectController.list()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05CheckBpassword]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05CheckBpassword(int,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06CheckMpassword]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06CheckMpassword(java.lang.String,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05UpdatePost(com.mycompany.myapp.dto.Exam12Board)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Delete]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05Delete(int)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Detail]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06Detail(java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06UpdateGet(java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06UpdatePost(com.mycompany.myapp.dto.Exam12Member)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Delete]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06Delete(java.lang.String)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05UpdateGet(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Detail]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05Detail(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam02Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam02Post(com.mycompany.myapp.dto.Exam12Board) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam03],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam03Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam03],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam03Post(com.mycompany.myapp.dto.Exam12Member) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam06(org.springframework.web.bind.support.SessionStatus)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam01(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam02(java.lang.String,java.lang.String,org.springframework.ui.Model) throws java.io.UnsupportedEncodingException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam03(javax.servlet.http.HttpServletResponse)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam05(java.lang.String,java.lang.String,com.mycompany.myapp.dto.Exam13Member)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam02Update]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam02Update()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam02Write]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam02Write(javax.servlet.http.HttpSession)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam01(javax.servlet.http.HttpSession)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/transaction/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam15TransactionController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/transaction/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam15TransactionController.exam01(java.lang.String,java.lang.String,int)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/chatClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.chatClient()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/echoClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.echoClient()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/measureClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.measureClient()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05CheckBpassword]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05CheckBpassword(int,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05UpdatePost(com.mycompany.myapp.dto.Exam12Board)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Delete]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05Delete(int)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05UpdateGet(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Detail]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05Detail(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam01()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/file/exam03]}" onto public void com.mycompany.myapp.controller.HomeworkController.download(javax.servlet.http.HttpServletResponse,java.lang.String,com.mycompany.myapp.dto.Exam12Board) throws java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam02Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam02Post(com.mycompany.myapp.dto.Exam12Board) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam03],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam03Get()
+6월 30, 2017 2:20:35 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam03],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam03Post(com.mycompany.myapp.dto.Exam12Member) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@f973499: startup date [Fri Jun 30 14:20:35 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@f973499: startup date [Fri Jun 30 14:20:35 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver initExceptionHandlerAdviceCache
+정보: Detected @ExceptionHandler methods in noAccountExceptionHandler
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping registerHandler
+정보: Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+6월 30, 2017 2:20:36 오후 org.springframework.web.context.support.GenericWebApplicationContext refresh
+경고: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+6월 30, 2017 2:20:36 오후 org.springframework.test.context.TestContextManager prepareTestInstance
+심각: Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@53b32d7] to prepare test instance [com.mycompany.myapp.dao.Exam12DaoImpl3Test@51827393]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedMap(BeanDefinitionValueResolver.java:407)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1531)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:134)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:145)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 46 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 58 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1147)
+	... 66 more
+Caused by: java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.initRequestUpgradeStrategy(AbstractHandshakeHandler.java:143)
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.<init>(AbstractHandshakeHandler.java:109)
+	at org.springframework.web.socket.server.support.DefaultHandshakeHandler.<init>(DefaultHandshakeHandler.java:35)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142)
+	... 68 more
+
+]]></system-err>
+  </testcase>
+  <testcase name="deleteTest" classname="com.mycompany.myapp.dao.Exam12DaoImpl3Test" time="0.006">
+    <error message="Failed to load ApplicationContext" type="java.lang.IllegalStateException">java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+Caused by: java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+</error>
+    <system-out><![CDATA[Exam10DIController - setExam10Service2 실행
+]]></system-out>
+    <system-err><![CDATA[6월 30, 2017 2:20:36 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from URL [file:WebContent/WEB-INF/spring/applicationContext.xml]
+6월 30, 2017 2:20:36 오후 org.springframework.beans.factory.xml.XmlBeanDefinitionReader loadBeanDefinitions
+정보: Loading XML bean definitions from URL [file:WebContent/WEB-INF/spring/dispatcher-servlet.xml]
+6월 30, 2017 2:20:36 오후 org.springframework.web.context.support.GenericWebApplicationContext prepareRefresh
+정보: Refreshing org.springframework.web.context.support.GenericWebApplicationContext@46d8f407: startup date [Fri Jun 30 14:20:36 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/]}" onto public java.lang.String com.mycompany.myapp.controller.Exam01HomeController.home()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/html/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam02HtmlController.html()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam01()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam02()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/css/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam03CssController.cssExam03()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam01()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam02()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam03()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam04()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam05()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam06()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam07]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam07()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam08]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam08()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam09]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam09()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam10]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam10()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/javascript/exam11]}" onto public java.lang.String com.mycompany.myapp.controller.Exam04JavaScriptController.javascriptExam11()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam01()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam02()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/bootstrap/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam05BootstrapController.bootstrapExam03()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04_html_fragment]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04_html_fragment()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04_json]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04_json()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam01()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam02()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam03()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jquery/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam06JqueryController.jqueryExam04()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam01()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam02()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam03()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam04(javax.servlet.http.HttpServletRequest)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jsp/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam07JspController.exam05(org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam02(javax.servlet.http.HttpServletRequest,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam03(java.lang.String,int,java.lang.String[],java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam01POST()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/http/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam08HttpController.exam01Get()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.join(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String[],java.lang.String)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.joinForm()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.join2(java.lang.String,java.lang.String,java.lang.String,int,java.lang.String[],java.lang.String,org.springframework.web.multipart.MultipartFile)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/form/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam09FormController.joinForm2()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/file/exam03]}" onto public void com.mycompany.myapp.controller.Exam09FormController.download(javax.servlet.http.HttpServletResponse,java.lang.String) throws java.io.IOException
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/di/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam10DIController.exam01()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/di/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam10DIController.exam02()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/redirect/write]}" onto public java.lang.String com.mycompany.myapp.controller.Exam11RedirectController.write()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/redirect/list]}" onto public java.lang.String com.mycompany.myapp.controller.Exam11RedirectController.list()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05CheckBpassword]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05CheckBpassword(int,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06CheckMpassword]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06CheckMpassword(java.lang.String,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05UpdatePost(com.mycompany.myapp.dto.Exam12Board)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Delete]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05Delete(int)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Detail]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06Detail(java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06UpdateGet(java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06UpdatePost(com.mycompany.myapp.dto.Exam12Member)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam06Delete]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam06Delete(java.lang.String)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05UpdateGet(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05Detail]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05Detail(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam01()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam05(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam02Get()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam02Post(com.mycompany.myapp.dto.Exam12Board) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam03],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam03Get()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/jdbc/exam03],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam12DBController.exam03Post(com.mycompany.myapp.dto.Exam12Member) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam06]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam06(org.springframework.web.bind.support.SessionStatus)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam01(javax.servlet.http.HttpServletResponse) throws java.lang.Exception
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam02]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam02(java.lang.String,java.lang.String,org.springframework.ui.Model) throws java.io.UnsupportedEncodingException
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/cookie/exam03]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam03(javax.servlet.http.HttpServletResponse)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/session/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.Exam13CookieAndSessionController.exam05(java.lang.String,java.lang.String,com.mycompany.myapp.dto.Exam13Member)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam02Update]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam02Update()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam02Write]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam02Write(javax.servlet.http.HttpSession)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/aop/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.Exam14AopController.exam01(javax.servlet.http.HttpSession)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/transaction/exam01],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.Exam15TransactionController.exam01()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/transaction/exam01],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.Exam15TransactionController.exam01(java.lang.String,java.lang.String,int)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/chatClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.chatClient()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/echoClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.echoClient()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/websocket/measureClient]}" onto public java.lang.String com.mycompany.myapp.controller.Exam16WebSocketController.measureClient()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05CheckBpassword]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05CheckBpassword(int,java.lang.String,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Update],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05UpdatePost(com.mycompany.myapp.dto.Exam12Board)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Delete]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05Delete(int)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Update],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05UpdateGet(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05Detail]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05Detail(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam01]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam01()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam04]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam04(org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam05]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam05(int,org.springframework.ui.Model)
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/file/exam03]}" onto public void com.mycompany.myapp.controller.HomeworkController.download(javax.servlet.http.HttpServletResponse,java.lang.String,com.mycompany.myapp.dto.Exam12Board) throws java.io.IOException
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam02],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam02Get()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam02],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam02Post(com.mycompany.myapp.dto.Exam12Board) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam03],methods=[GET]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam03Get()
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping register
+정보: Mapped "{[/homework/exam03],methods=[POST]}" onto public java.lang.String com.mycompany.myapp.controller.HomeworkController.exam03Post(com.mycompany.myapp.dto.Exam12Member) throws java.lang.IllegalStateException,java.io.IOException
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@46d8f407: startup date [Fri Jun 30 14:20:36 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter initControllerAdviceCache
+정보: Looking for @ControllerAdvice: org.springframework.web.context.support.GenericWebApplicationContext@46d8f407: startup date [Fri Jun 30 14:20:36 KST 2017]; root of context hierarchy
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver initExceptionHandlerAdviceCache
+정보: Detected @ExceptionHandler methods in noAccountExceptionHandler
+6월 30, 2017 2:20:36 오후 org.springframework.web.servlet.handler.SimpleUrlHandlerMapping registerHandler
+정보: Mapped URL path [/resources/**] onto handler 'org.springframework.web.servlet.resource.ResourceHttpRequestHandler#0'
+6월 30, 2017 2:20:36 오후 org.springframework.web.context.support.GenericWebApplicationContext refresh
+경고: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+6월 30, 2017 2:20:36 오후 org.springframework.test.context.TestContextManager prepareTestInstance
+심각: Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@53b32d7] to prepare test instance [com.mycompany.myapp.dao.Exam12DaoImpl3Test@79d743e6]
+java.lang.IllegalStateException: Failed to load ApplicationContext
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124)
+	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:83)
+	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:189)
+	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:131)
+	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:230)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.createTest(SpringJUnit4ClassRunner.java:228)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner$1.runReflectiveCall(SpringJUnit4ClassRunner.java:287)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.methodBlock(SpringJUnit4ClassRunner.java:289)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:247)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.runChild(SpringJUnit4ClassRunner.java:94)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.springframework.test.context.junit4.statements.RunBeforeTestClassCallbacks.evaluate(RunBeforeTestClassCallbacks.java:61)
+	at org.springframework.test.context.junit4.statements.RunAfterTestClassCallbacks.evaluate(RunAfterTestClassCallbacks.java:70)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at org.springframework.test.context.junit4.SpringJUnit4ClassRunner.run(SpringJUnit4ClassRunner.java:191)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:365)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeWithRerun(JUnit4Provider.java:272)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:236)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:159)
+	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:386)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:323)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:143)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHandlerMapping#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0' while setting bean property 'urlMap' with key [/websocket/echo]; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveManagedMap(BeanDefinitionValueResolver.java:407)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1531)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1276)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:553)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:761)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:866)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:542)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:134)
+	at org.springframework.test.context.web.AbstractGenericWebContextLoader.loadContext(AbstractGenericWebContextLoader.java:61)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.delegateLoading(AbstractDelegatingSmartContextLoader.java:108)
+	at org.springframework.test.context.support.AbstractDelegatingSmartContextLoader.loadContext(AbstractDelegatingSmartContextLoader.java:251)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:98)
+	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:116)
+	... 26 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.WebSocketHttpRequestHandler#0': Cannot resolve reference to bean 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0' while setting constructor argument; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:359)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:108)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveConstructorArguments(ConstructorResolver.java:634)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:145)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1193)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1095)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 46 more
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'org.springframework.web.socket.server.support.DefaultHandshakeHandler#0': Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1155)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1099)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:513)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:483)
+	at org.springframework.beans.factory.support.AbstractBeanFactory$1.getObject(AbstractBeanFactory.java:306)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:230)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:302)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:197)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:351)
+	... 58 more
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.web.socket.server.support.DefaultHandshakeHandler]: Constructor threw exception; nested exception is java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:154)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:89)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1147)
+	... 66 more
+Caused by: java.lang.IllegalStateException: No suitable default RequestUpgradeStrategy found
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.initRequestUpgradeStrategy(AbstractHandshakeHandler.java:143)
+	at org.springframework.web.socket.server.support.AbstractHandshakeHandler.<init>(AbstractHandshakeHandler.java:109)
+	at org.springframework.web.socket.server.support.DefaultHandshakeHandler.<init>(DefaultHandshakeHandler.java:35)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:142)
+	... 68 more
+
+]]></system-err>
+  </testcase>
 </testsuite>
