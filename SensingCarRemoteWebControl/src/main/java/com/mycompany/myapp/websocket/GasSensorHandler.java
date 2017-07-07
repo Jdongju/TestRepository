@@ -46,7 +46,7 @@ public class GasSensorHandler extends TextWebSocketHandler implements Applicatio
 				String json = response.getResponseText();
 				//temperature를 읽어서 jsobObject로 불러온다.
 				JSONObject jsonObject = new JSONObject(json);
-				double doubleT=Double.parseDouble(jsonObject.getString("gassensor"));
+				double doubleT=Double.parseDouble(jsonObject.getString("gas"));
 				double gassensor=((int)(doubleT*10))/10.0;
 				
 				jsonObject= new JSONObject();

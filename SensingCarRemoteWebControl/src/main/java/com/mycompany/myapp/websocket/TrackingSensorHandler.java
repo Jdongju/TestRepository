@@ -42,7 +42,7 @@ public class TrackingSensorHandler extends TextWebSocketHandler implements Appli
 //				logger.info(json);
 				
 				JSONObject jsonObject = new JSONObject(json);
-				String tracking = jsonObject.getString("trackingsensor");
+				String tracking = jsonObject.getString("tracking");
 				
 				jsonObject = new JSONObject();
 				jsonObject.put("time", getUTCTime(new Date().getTime()));

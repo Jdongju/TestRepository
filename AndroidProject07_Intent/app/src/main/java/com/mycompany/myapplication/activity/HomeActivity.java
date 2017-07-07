@@ -29,7 +29,7 @@ public class HomeActivity extends AppCompatActivity {
         int permissionCall = ActivityCompat.checkSelfPermission(this, Manifest.permission.CALL_PHONE);
         int permissionRES = ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE);
         int permissionWES = ActivityCompat.checkSelfPermission(this, Manifest.permission.WRITE_EXTERNAL_STORAGE);
-        if (permissionCall != PackageManager.PERMISSION_GRANTED || permissionRES != PackageManager.PERMISSION_DENIED || permissionWES != PackageManager.PERMISSION_DENIED) {
+        if (permissionCall != PackageManager.PERMISSION_GRANTED || permissionRES != PackageManager.PERMISSION_GRANTED || permissionWES != PackageManager.PERMISSION_GRANTED) {
             ActivityCompat.requestPermissions(
                     this,
                     new String[]{Manifest.permission.CALL_PHONE,
